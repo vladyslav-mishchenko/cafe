@@ -1,0 +1,12 @@
+.main-nav{}
+
+.main-menu{
+    display: flex;
+
+    >.item{
+
+        >.link{
+            color: #FFFFFF;
+        }
+    }
+}
