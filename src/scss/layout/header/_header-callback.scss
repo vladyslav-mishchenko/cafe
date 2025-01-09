@@ -1,0 +1,34 @@
+.header-callback{
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+
+    height: 35px;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .t{
+        color: #FFC492;
+        font-size: 14px;
+        padding-right: 5px;
+    }
+
+    .icon{
+        font-size: 10px;
+        color: #FFFFFF;
+        transition: color .2s linear;
+    }
+
+    &:hover{
+
+        .icon{
+            color: #FFC492;
+        }
+    }
+}

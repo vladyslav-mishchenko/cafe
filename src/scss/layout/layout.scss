@@ -24,14 +24,17 @@ body{
     min-width: 320px;
     max-width: 1920px;
 
+    background: #19161B;
+
     display: grid;
 
-    // header: auto
+    // header: auto | fixed
     // content: 1fr
     // footer auto
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 1fr auto;
 }
 
+// adaptive container
 .g {
 
     >.container {
