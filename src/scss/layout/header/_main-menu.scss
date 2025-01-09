@@ -1,12 +1,60 @@
-.main-nav{}
+@use '../../settings/breakpoints';
+
+.main-nav{
+    padding-left: 50px;
+}
 
 .main-menu{
     display: flex;
 
     >.item{
+        margin: 0 20px 0 20px;
+
+        &:first-child{
+            margin: 0 20px 0 0;
+        }
+
+        &:last-child{
+            margin: 0 0 0 20px;
+        }
+
+        &:only-child{
+            margin: 0 0 0 0;
+        }
+
+        // @include breakpoints.media-breakpoint-only(xl) {}
+
+        @include breakpoints.media-breakpoint-only(lg) {
+            margin: 0 15px 0 15px;
+
+            &:first-child{
+                margin: 0 15px 0 0;
+            }
+    
+            &:last-child{
+                margin: 0 0 0 15px;
+            }
+    
+            &:only-child{
+                margin: 0 0 0 0;
+            }
+        }
+
+        // @include breakpoints.media-breakpoint-only(md) {}
+
+        // @include breakpoints.media-breakpoint-only(sm) {}
+
+        // @include breakpoints.media-breakpoint-only(xs) {}
 
         >.link{
+            font-size: 14px;
+
             color: #FFFFFF;
+            transition: color .2s linear;
+
+            &:hover{
+                color: #FFC492;
+            }
         }
     }
 }
