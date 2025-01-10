@@ -1,0 +1,97 @@
+@use '../../settings/breakpoints';
+
+.footer-nav{
+    padding-top: 50px;
+    padding-bottom: 38px;
+}
+
+.footer-menu{
+    display: flex;
+    flex-direction: row;
+
+    // @include breakpoints.media-breakpoint-only(xl) {}
+
+    // @include breakpoints.media-breakpoint-only(lg) {}
+
+    // @include breakpoints.media-breakpoint-only(md) {}
+
+    // @include breakpoints.media-breakpoint-only(sm) {}
+
+    // @include breakpoints.media-breakpoint-only(xs) {}
+
+    @include breakpoints.media-breakpoint-down(lg){
+        display: block;
+    }
+
+    >.item{
+        margin: 0 20px 0 20px;
+
+        &:first-child{
+            margin: 0 20px 0 0;
+        }
+
+        &:last-child{
+            margin: 0 0 0 20px;
+        }
+
+        &:only-child{
+            margin: 0 0 0 0;
+        }
+
+        // @include breakpoints.media-breakpoint-only(xl) {}
+
+        // @include breakpoints.media-breakpoint-only(lg) {}
+
+        // @include breakpoints.media-breakpoint-only(md) {}
+
+        // @include breakpoints.media-breakpoint-only(sm) {}
+
+        // @include breakpoints.media-breakpoint-only(xs) {}
+
+        @include breakpoints.media-breakpoint-down(lg){
+            margin: 8px 0 8px 0;
+
+            &:first-child{
+                margin: 0 0 0 0;
+            }
+    
+            &:last-child{
+                margin: 0 0 0 0;
+            }
+    
+            &:only-child{
+                margin: 0 0 0 0;
+            }
+        }
+
+        >.link{
+            color: #FFFFFF;
+            transition: color .2s linear;
+
+            &:hover{
+                color: #FFB577;
+            }
+
+            // @include breakpoints.media-breakpoint-only(xl) {}
+
+            // @include breakpoints.media-breakpoint-only(lg) {}
+
+            // @include breakpoints.media-breakpoint-only(md) {}
+
+            // @include breakpoints.media-breakpoint-only(sm) {}
+
+            // @include breakpoints.media-breakpoint-only(xs) {}
+
+            @include breakpoints.media-breakpoint-down(lg){
+                display: block;
+                padding: 5px 0 5px 0;
+
+                &:first-child{}
+        
+                &:last-child{}
+        
+                &:only-child{}
+            }
+        }
+    }
+}
