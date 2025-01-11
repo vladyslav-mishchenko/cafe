@@ -1,6 +1,17 @@
 @use './icons';
 
+// Poppins
+// basefont: Poppins-Regular
+// buttonfont: Poppins-Medium
+
+// Playfair Display
+
 @font-face {
-    font-family: '';
-    src: url('');
+    font-family: 'basefont';
+    src: url('./fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'buttonfont';
+    src: url('./fonts/poppins/Poppins-Medium.ttf');
 }
