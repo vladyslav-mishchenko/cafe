@@ -4,8 +4,6 @@
 // basefont: Poppins-Regular
 // buttonfont: Poppins-Medium
 
-// Playfair Display
-
 @font-face {
     font-family: 'basefont';
     src: url('./fonts/poppins/Poppins-Regular.ttf');
@@ -14,4 +12,12 @@
 @font-face {
     font-family: 'buttonfont';
     src: url('./fonts/poppins/Poppins-Medium.ttf');
+}
+
+// Playfair Display
+// titlefont: PlayfairDisplay-Bold
+
+@font-face {
+    font-family: 'titlefont';
+    src: url('./fonts/playfair-display/PlayfairDisplay-Bold.ttf');
 }
