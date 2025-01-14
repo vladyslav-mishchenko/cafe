@@ -9,6 +9,8 @@
     right: 0;
     bottom: auto;
     left: 0;
+
+    z-index: 1000;
 }
 
 .header{
@@ -45,6 +47,7 @@
 
     >.logo-link{
         color: #FFB577;
+        font-size: 16px;
     }
 
     >.c1{
