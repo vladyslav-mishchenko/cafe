@@ -1,1 +1,197 @@
-// main info
+@use '../../../settings/breakpoints';
+
+.b-main-info{
+    margin-top: 95px;
+    margin-bottom: 50px;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    @include breakpoints.media-breakpoint-only(xl) {
+        margin-top: 90px;
+    }
+
+    // @include breakpoints.media-breakpoint-only(lg) {}
+
+    // @include breakpoints.media-breakpoint-only(md) {}
+
+    // @include breakpoints.media-breakpoint-only(sm) {}
+
+    // @include breakpoints.media-breakpoint-only(xs) {}
+
+    @include breakpoints.media-breakpoint-down(xl){
+        margin-top: 50px;
+    }
+
+    @include breakpoints.media-breakpoint-down(lg){
+        grid-template-columns: auto;
+        gap: 50px;
+    }
+
+    >.c1{
+        align-self: center;
+        padding-right: 25px;
+
+        // @include breakpoints.media-breakpoint-only(xl) {}
+    
+        // @include breakpoints.media-breakpoint-only(lg) {}
+    
+        @include breakpoints.media-breakpoint-only(md) {
+            width: 80%;
+        }
+    
+        @include breakpoints.media-breakpoint-only(sm) {
+            width: 80%;
+        }
+    
+        // @include breakpoints.media-breakpoint-only(xs) {}
+    
+        // @include breakpoints.media-breakpoint-down(xl){}
+    
+        @include breakpoints.media-breakpoint-down(lg){
+            padding-right: 0;
+        }
+    }
+
+    >.c2{}
+}
+
+.main-info--info{
+
+    >h1{
+        color: #FFFFFF;
+
+        font-size: 58px;
+        font-family: titlefont;
+
+        @include breakpoints.media-breakpoint-only(xl) {
+            font-size: 48px;
+        }
+
+        @include breakpoints.media-breakpoint-only(lg) {
+            font-size: 38px;
+        }
+
+        @include breakpoints.media-breakpoint-only(md) {
+            font-size: 28px;
+        }
+
+        @include breakpoints.media-breakpoint-only(sm) {
+            font-size: 28px;
+        }
+
+        @include breakpoints.media-breakpoint-only(xs) {
+            font-size: 24px;
+        }
+    }
+
+    >.description{
+        color: #B8B8B8;
+        font-size: 16px;
+
+        // @include breakpoints.media-breakpoint-only(xl) {}
+
+        // @include breakpoints.media-breakpoint-only(lg) {}
+
+        // @include breakpoints.media-breakpoint-only(md) {}
+
+        // @include breakpoints.media-breakpoint-only(sm) {}
+
+        // @include breakpoints.media-breakpoint-only(xs) {}
+
+        @include breakpoints.media-breakpoint-down(xl){
+            font-size: 14px;
+        }
+
+        p{
+            margin: 15px 0 20px 0;
+            padding: 0;
+        }
+    }
+
+    >.link{}
+}
+
+.main-info--banner{
+    display: block;
+    max-width: 100%;
+}
+
+.main-info--list{
+    margin-top: 50px;
+
+    @include breakpoints.media-breakpoint-only(xl) {
+        margin-top: 40px;
+    }
+
+    // @include breakpoints.media-breakpoint-only(lg) {}
+
+    // @include breakpoints.media-breakpoint-only(md) {}
+
+    // @include breakpoints.media-breakpoint-only(sm) {}
+
+    // @include breakpoints.media-breakpoint-only(xs) {}
+
+    @include breakpoints.media-breakpoint-down(xl){
+        margin-top: 35px;
+    }
+
+    >.item{
+        color: #FFFFFF;
+
+        font-family: titlefont;
+        font-size: 20px;
+
+        margin: 10px 0 10px 0;
+
+        &:first-child{
+            margin: 0 0 10px 0;
+        }
+
+        &:last-child{
+            margin: 10px 0 0 0;
+        }
+
+        &:only-child{
+            margin: 0 0 0 0;
+        }
+
+        // @include breakpoints.media-breakpoint-only(xl) {}
+
+        // @include breakpoints.media-breakpoint-only(lg) {}
+
+        // @include breakpoints.media-breakpoint-only(md) {}
+
+        // @include breakpoints.media-breakpoint-only(sm) {}
+
+        // @include breakpoints.media-breakpoint-only(xs) {}
+
+        @include breakpoints.media-breakpoint-down(xl){
+            font-size: 16px;
+        }
+    }
+}
+
+.main-info--sublist{
+
+    >.item{
+        color: #B8B8B8;
+
+        font-family: basefont;
+        font-size: 16px;
+
+        // @include breakpoints.media-breakpoint-only(xl) {}
+
+        // @include breakpoints.media-breakpoint-only(lg) {}
+
+        // @include breakpoints.media-breakpoint-only(md) {}
+
+        // @include breakpoints.media-breakpoint-only(sm) {}
+
+        // @include breakpoints.media-breakpoint-only(xs) {}
+
+        @include breakpoints.media-breakpoint-down(xl){
+            font-size: 14px;
+        }
+    }
+}
