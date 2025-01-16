@@ -1,0 +1,95 @@
+@use '../../../settings/breakpoints';
+
+.menu{
+    margin: 150px 0;
+}
+
+.menu--article{
+
+    h2{
+        font-family: titlefont;
+        font-size: 42px;
+
+        color: #FFFFFF;
+
+        @include breakpoints.media-breakpoint-only(xl) {
+            font-size: 42px;
+        }
+
+        @include breakpoints.media-breakpoint-only(lg) {
+            font-size: 38px;
+        }
+
+        @include breakpoints.media-breakpoint-only(md) {
+            font-size: 22px;
+        }
+
+        @include breakpoints.media-breakpoint-only(sm) {
+            font-size: 22px;
+        }
+
+        @include breakpoints.media-breakpoint-only(xs) {
+            font-size: 22px;
+        }
+    }
+
+    p{
+        color: #B8B8B8;
+        font-size: 16px;
+
+        // @include breakpoints.media-breakpoint-only(xl) {}
+
+        // @include breakpoints.media-breakpoint-only(lg) {}
+
+        // @include breakpoints.media-breakpoint-only(md) {}
+
+        // @include breakpoints.media-breakpoint-only(sm) {}
+
+        // @include breakpoints.media-breakpoint-only(xs) {}
+
+        @include breakpoints.media-breakpoint-down(xl){
+            font-size: 14px;
+        }
+    }
+}
+
+.b-menu{
+    display: grid;
+    grid-template-columns: 60% 40%;
+
+    padding-top: 35px;
+
+    // @include breakpoints.media-breakpoint-only(xl) {}
+
+    // @include breakpoints.media-breakpoint-only(lg) {}
+
+    // @include breakpoints.media-breakpoint-only(md) {}
+
+    // @include breakpoints.media-breakpoint-only(sm) {}
+
+    // @include breakpoints.media-breakpoint-only(xs) {}
+
+    @include breakpoints.media-breakpoint-down(lg){
+        grid-template-columns: auto;
+    }
+
+    >.c1{
+        padding-right: 50px;
+
+        // @include breakpoints.media-breakpoint-only(xl) {}
+
+        // @include breakpoints.media-breakpoint-only(lg) {}
+
+        // @include breakpoints.media-breakpoint-only(md) {}
+
+        // @include breakpoints.media-breakpoint-only(sm) {}
+
+        // @include breakpoints.media-breakpoint-only(xs) {}
+
+        @include breakpoints.media-breakpoint-down(lg){
+            padding-right: 0;
+        }
+    }
+
+    >.c2{}
+}
