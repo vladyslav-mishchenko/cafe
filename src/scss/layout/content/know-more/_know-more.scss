@@ -98,29 +98,6 @@
     }
 }
 
-.block-badge{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    color: #FFB577;
-    text-transform: uppercase;
-
-    font-family: subtitlefont;
-    font-size: 16px;
-
-    &::after{
-        content: "";
-        display: block;
-
-        width: 48px;
-        height: 2px;
-
-        margin-left: 10px;
-        background-color: #FFFFFF;
-    }
-}
-
 .know-more--list{
     margin-top: 45px;
 
