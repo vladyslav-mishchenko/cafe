@@ -1,0 +1,212 @@
+@use '../../../settings/breakpoints';
+
+.menu{
+    margin: 150px 0;
+}
+
+.menu--article{
+
+    h2{
+        font-family: titlefont;
+        font-size: 42px;
+
+        color: #FFFFFF;
+
+        @include breakpoints.media-breakpoint-only(xl) {
+            font-size: 42px;
+        }
+
+        @include breakpoints.media-breakpoint-only(lg) {
+            font-size: 38px;
+        }
+
+        @include breakpoints.media-breakpoint-only(md) {
+            font-size: 22px;
+        }
+
+        @include breakpoints.media-breakpoint-only(sm) {
+            font-size: 22px;
+        }
+
+        @include breakpoints.media-breakpoint-only(xs) {
+            font-size: 22px;
+        }
+    }
+
+    p{
+        color: #B8B8B8;
+        font-size: 16px;
+
+        // @include breakpoints.media-breakpoint-only(xl) {}
+
+        // @include breakpoints.media-breakpoint-only(lg) {}
+
+        // @include breakpoints.media-breakpoint-only(md) {}
+
+        // @include breakpoints.media-breakpoint-only(sm) {}
+
+        // @include breakpoints.media-breakpoint-only(xs) {}
+
+        @include breakpoints.media-breakpoint-down(xl){
+            font-size: 14px;
+        }
+    }
+}
+
+.b-menu{
+    display: grid;
+    grid-template-columns: 60% 40%;
+
+    padding-top: 35px;
+
+    // @include breakpoints.media-breakpoint-only(xl) {}
+
+    // @include breakpoints.media-breakpoint-only(lg) {}
+
+    // @include breakpoints.media-breakpoint-only(md) {}
+
+    // @include breakpoints.media-breakpoint-only(sm) {}
+
+    // @include breakpoints.media-breakpoint-only(xs) {}
+
+    @include breakpoints.media-breakpoint-down(lg){
+        grid-template-columns: auto;
+    }
+
+    >.c1{
+        padding-right: 50px;
+
+        // @include breakpoints.media-breakpoint-only(xl) {}
+
+        // @include breakpoints.media-breakpoint-only(lg) {}
+
+        // @include breakpoints.media-breakpoint-only(md) {}
+
+        // @include breakpoints.media-breakpoint-only(sm) {}
+
+        // @include breakpoints.media-breakpoint-only(xs) {}
+
+        @include breakpoints.media-breakpoint-down(lg){
+            padding-right: 0;
+        }
+    }
+
+    >.c2{}
+}
+
+.menu-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+
+    // @include breakpoints.media-breakpoint-only(xl) {}
+
+    // @include breakpoints.media-breakpoint-only(lg) {}
+
+    // @include breakpoints.media-breakpoint-only(md) {}
+
+    // @include breakpoints.media-breakpoint-only(sm) {}
+
+    // @include breakpoints.media-breakpoint-only(xs) {}
+
+    @include breakpoints.media-breakpoint-down(lg){
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    @include breakpoints.media-breakpoint-down(sm){
+        grid-template-columns: auto;
+    }
+
+    >.item{}
+}
+
+.menu-list--card{
+    background-color: #1F1D21;
+
+    .link{
+        display: block;
+
+        &:hover{
+
+            img{
+                opacity: 90%;
+            }
+
+            .menu-list--price{
+
+                >.price{
+                    color: #FFB577;
+                }
+            }
+        }
+    }
+}
+
+.menu-list--img{
+    display: block;
+
+    max-width: 100%;
+    opacity: 100%;
+    transition: opacity .2s linear;
+}
+
+.menu-list--price{
+    min-height: 80px;
+    padding: 0 25px;
+
+    font-size: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+
+    // @include breakpoints.media-breakpoint-only(xl) {}
+
+    @include breakpoints.media-breakpoint-only(lg) {
+        padding: 0 15px;
+    }
+
+    // @include breakpoints.media-breakpoint-only(md) {}
+
+    // @include breakpoints.media-breakpoint-only(sm) {}
+
+    // @include breakpoints.media-breakpoint-only(xs) {}
+
+    @include breakpoints.media-breakpoint-down(lg){
+        padding: 0 10px;
+        font-size: 16px;
+    }
+
+    >.title{
+        font-family: titlefont;
+
+        color: #FFFFFF;
+    }
+
+    >.price{
+        font-family: pricefont;
+
+        color: #FFFFFF;
+        transition: color .2s linear;
+    }
+}
+
+.menu-list--title{
+    margin: 10px 0 50px 0;
+
+    >.t{
+        color: #C4E4EA;
+
+        font-family: titlefont;
+        font-size: 14px;
+    }
+}
+
+.menu--link{
+    margin-top: 35px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

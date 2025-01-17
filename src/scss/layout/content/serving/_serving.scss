@@ -5,47 +5,6 @@
     margin: 150px 0;
 }
 
-.b-serving{
-    display: grid;
-    grid-template-columns: 60% 40%;
-
-    padding-top: 35px;
-
-    // @include breakpoints.media-breakpoint-only(xl) {}
-
-    // @include breakpoints.media-breakpoint-only(lg) {}
-
-    // @include breakpoints.media-breakpoint-only(md) {}
-
-    // @include breakpoints.media-breakpoint-only(sm) {}
-
-    // @include breakpoints.media-breakpoint-only(xs) {}
-
-    @include breakpoints.media-breakpoint-down(lg){
-        grid-template-columns: auto;
-    }
-
-    >.c1{
-        padding-right: 50px;
-
-        // @include breakpoints.media-breakpoint-only(xl) {}
-
-        // @include breakpoints.media-breakpoint-only(lg) {}
-
-        // @include breakpoints.media-breakpoint-only(md) {}
-
-        // @include breakpoints.media-breakpoint-only(sm) {}
-
-        // @include breakpoints.media-breakpoint-only(xs) {}
-
-        @include breakpoints.media-breakpoint-down(lg){
-            padding-right: 0;
-        }
-    }
-
-    >.c2{}
-}
-
 .serving--article{
 
     h2{
@@ -93,6 +52,47 @@
             font-size: 14px;
         }
     }
+}
+
+.b-serving{
+    display: grid;
+    grid-template-columns: 60% 40%;
+
+    padding-top: 35px;
+
+    // @include breakpoints.media-breakpoint-only(xl) {}
+
+    // @include breakpoints.media-breakpoint-only(lg) {}
+
+    // @include breakpoints.media-breakpoint-only(md) {}
+
+    // @include breakpoints.media-breakpoint-only(sm) {}
+
+    // @include breakpoints.media-breakpoint-only(xs) {}
+
+    @include breakpoints.media-breakpoint-down(lg){
+        grid-template-columns: auto;
+    }
+
+    >.c1{
+        padding-right: 50px;
+
+        // @include breakpoints.media-breakpoint-only(xl) {}
+
+        // @include breakpoints.media-breakpoint-only(lg) {}
+
+        // @include breakpoints.media-breakpoint-only(md) {}
+
+        // @include breakpoints.media-breakpoint-only(sm) {}
+
+        // @include breakpoints.media-breakpoint-only(xs) {}
+
+        @include breakpoints.media-breakpoint-down(lg){
+            padding-right: 0;
+        }
+    }
+
+    >.c2{}
 }
 
 .serving--list{
