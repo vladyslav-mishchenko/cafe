@@ -19,6 +19,11 @@
     src: url('./fonts/poppins/Poppins-Medium.ttf');
 }
 
+@font-face {
+    font-family: 'author';
+    src: url('./fonts/poppins/Poppins-Medium.ttf');
+}
+
 // Playfair Display
 // titlefont: PlayfairDisplay-Bold
 
@@ -30,4 +35,9 @@
 @font-face {
     font-family: 'subtitlefont';
     src: url('./fonts/playfair-display/PlayfairDisplay-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'quotelefont';
+    src: url('./fonts/playfair-display/PlayfairDisplay-Medium.ttf');
 }
