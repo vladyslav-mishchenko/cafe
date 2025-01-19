@@ -3,6 +3,10 @@
 
 <head>
   {{> head}}
+
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 
 <body class="body">
@@ -526,12 +530,48 @@
           </ul>
         </div>
       </section>
+
+      <section class="contacts g">
+        <div class="container">
+          <div class="b-contacts">
+            <div class="c1">
+              <ul class="contacts-list">
+                <li class="item">Working Hour
+                  <ul class="contacts-sublist">
+                    <li class="item">Saturday to Sunday</li>
+                    <li class="item">09:00 AM to 11:00 PM</li>
+                  </ul>
+                </li>
+
+                <li class="item">Location
+                  <ul class="contacts-sublist">
+                    <li class="item">Street - 127, New York,</li>
+                    <li class="item">United States</li>
+                    <li class="item">546544</li>
+                  </ul>
+                </li>
+
+                <li class="item">Contact Us
+                  <ul class="contacts-sublist">
+                    <li class="item">+123456789</li>
+                    <li class="item">hey@yourdomain.com</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <div class="c2">
+              <div id="map"></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
     
     {{> footer}}
   </div>
 
   <script type="module" src="{{resolve-from-root 'main.js'}}"></script>
-</body>
-
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjQJqatkS92cmZchvYeTH3H4AmgLqCVPs&callback=initMap&v=weekly" defer></script>
+</body>  
 </html>
