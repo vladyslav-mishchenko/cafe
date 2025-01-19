@@ -12,6 +12,8 @@
     "cover 99.5%"
   ],
   "devDependencies": {
+    "@types/google.maps": "^3.53.5",
+    "typescript": "^5.5.3",
     "autoprefixer": "^10.4.15",
     "postcss": "^8.4.35",
     "postcss-sort-media-queries": "^5.2.0",

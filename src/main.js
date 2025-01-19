@@ -1,5 +1,3 @@
-// scss
-// import './style.scss';
+import './js/googlemap';
 
-// js
-import './js/test';
+
