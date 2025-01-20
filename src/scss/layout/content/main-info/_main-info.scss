@@ -64,10 +64,9 @@
 .main-info--article{
 
     >h1{
-        color: #FFFFFF;
-
+        font-family: f203;
         font-size: 58px;
-        font-family: titlefont;
+        color: #FFFFFF;
 
         @include breakpoints.media-breakpoint-only(xl) {
             font-size: 48px;
@@ -94,8 +93,8 @@
         margin: 15px 0 20px 0;
         padding: 0;
 
-        color: #B8B8B8;
         font-size: 16px;
+        color: #B8B8B8;
 
         // @include breakpoints.media-breakpoint-only(xl) {}
 
@@ -133,10 +132,9 @@
     }
 
     >.item{
-        color: #FFFFFF;
-
-        font-family: titlefont;
+        font-family: f203;
         font-size: 20px;
+        color: #FFFFFF;
 
         margin: 10px 0 10px 0;
 
@@ -170,11 +168,10 @@
 
 .main-info--sublist{
 
-    >.item{
-        color: #B8B8B8;
-
-        font-family: basefont;
+    >.item{      
+        font-family: f101;
         font-size: 16px;
+        color: #B8B8B8;
 
         // @include breakpoints.media-breakpoint-only(xl) {}
 

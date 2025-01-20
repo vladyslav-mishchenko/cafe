@@ -51,7 +51,7 @@
     >h2{
         margin-top: 35px;
 
-        font-family: titlefont;
+        font-family: f203;
         font-size: 42px;
 
         color: #FFFFFF;
@@ -78,9 +78,8 @@
     }
 
     p{
-        color: #B8B8B8;
-
         font-size: 16px;
+        color: #B8B8B8;
 
         // @include breakpoints.media-breakpoint-only(xl) {}
     
@@ -162,7 +161,9 @@
             font-size: 32px;
             color: #FFB577;
 
-            // @include breakpoints.media-breakpoint-only(xl) {}
+            @include breakpoints.media-breakpoint-only(xl) {
+                font-size: 28px;
+            }
     
             // @include breakpoints.media-breakpoint-only(lg) {}
     
@@ -179,10 +180,15 @@
 
         >.t{
             margin-left: 5px;
-            color: #C4E4EA;
+
+            font-family: f102;
             font-size: 24px;
 
-            // @include breakpoints.media-breakpoint-only(xl) {}
+            color: #C4E4EA;
+
+            @include breakpoints.media-breakpoint-only(xl) {
+                font-size: 22px;
+            }
     
             // @include breakpoints.media-breakpoint-only(lg) {}
     
