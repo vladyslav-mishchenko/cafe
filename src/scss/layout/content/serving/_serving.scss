@@ -8,7 +8,7 @@
 .serving--article{
 
     h2{
-        font-family: titlefont;
+        font-family: f203;
         font-size: 42px;
 
         color: #FFFFFF;
@@ -35,8 +35,8 @@
     }
 
     p{
-        color: #B8B8B8;
         font-size: 16px;
+        color: #B8B8B8;
 
         // @include breakpoints.media-breakpoint-only(xl) {}
 
@@ -189,7 +189,7 @@
     >h3{
         margin: 25px 0 10px 0;
 
-        font-family: titlefont;
+        font-family: f203;
         font-size: 32px;
 
         color: #FFFFFF;
@@ -219,9 +219,8 @@
         margin: 10px 0 30px 0;
         padding: 0;
 
-        color: #B8B8B8;
-
         font-size: 16px;
+        color: #B8B8B8;
 
         // @include breakpoints.media-breakpoint-only(xl) {}
 

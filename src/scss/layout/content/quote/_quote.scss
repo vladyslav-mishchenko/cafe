@@ -98,7 +98,7 @@
         margin: 10px 0 0 0;
         padding: 0;
 
-        font-family: quotelefont;
+        font-family: f202;
         font-size: 32px;
 
         @include breakpoints.media-breakpoint-only(xl) {
@@ -146,7 +146,7 @@
 }
 
 .quote-author--info{
-    font-family: 'author';
+    font-family: f102;
 
     >.name{
         color: #FFFFFF;
