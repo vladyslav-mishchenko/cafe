@@ -1,16 +1,18 @@
 @use '../../../settings/breakpoints';
 
-.menu{
+.menu {
     margin: 150px 0;
 }
 
-.menu--article{
+.menu--article {
 
-    h2{
+    h2 {
         font-family: f203;
         font-size: 42px;
 
         color: #FFFFFF;
+
+        line-height: 1.4;
 
         @include breakpoints.media-breakpoint-only(xl) {
             font-size: 42px;
@@ -33,9 +35,11 @@
         }
     }
 
-    p{
+    p {
         color: #B8B8B8;
         font-size: 16px;
+
+        line-height: 1.4;
 
         // @include breakpoints.media-breakpoint-only(xl) {}
 
@@ -47,13 +51,13 @@
 
         // @include breakpoints.media-breakpoint-only(xs) {}
 
-        @include breakpoints.media-breakpoint-down(xl){
+        @include breakpoints.media-breakpoint-down(xl) {
             font-size: 14px;
         }
     }
 }
 
-.b-menu{
+.b-menu {
     display: grid;
     grid-template-columns: 60% 40%;
 
@@ -69,11 +73,11 @@
 
     // @include breakpoints.media-breakpoint-only(xs) {}
 
-    @include breakpoints.media-breakpoint-down(lg){
+    @include breakpoints.media-breakpoint-down(lg) {
         grid-template-columns: auto;
     }
 
-    >.c1{
+    >.c1 {
         padding-right: 50px;
 
         // @include breakpoints.media-breakpoint-only(xl) {}
@@ -86,15 +90,30 @@
 
         // @include breakpoints.media-breakpoint-only(xs) {}
 
-        @include breakpoints.media-breakpoint-down(lg){
+        @include breakpoints.media-breakpoint-down(lg) {
             padding-right: 0;
         }
     }
 
-    >.c2{}
+    >.c2 {
+
+        // @include breakpoints.media-breakpoint-only(xl) {}
+
+        // @include breakpoints.media-breakpoint-only(lg) {}
+
+        // @include breakpoints.media-breakpoint-only(md) {}
+
+        // @include breakpoints.media-breakpoint-only(sm) {}
+
+        // @include breakpoints.media-breakpoint-only(xs) {}
+
+        @include breakpoints.media-breakpoint-down(lg) {
+            padding-top: 10px;
+        }
+    }
 }
 
-.menu-list{
+.menu-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
@@ -109,33 +128,33 @@
 
     // @include breakpoints.media-breakpoint-only(xs) {}
 
-    @include breakpoints.media-breakpoint-down(lg){
+    @include breakpoints.media-breakpoint-down(lg) {
         grid-template-columns: 1fr 1fr;
         gap: 10px;
     }
 
-    @include breakpoints.media-breakpoint-down(sm){
+    @include breakpoints.media-breakpoint-down(sm) {
         grid-template-columns: auto;
     }
 
-    >.item{}
+    >.item {}
 }
 
-.menu-list--card{
+.menu-list--card {
     background-color: #1F1D21;
 
-    .link{
+    .link {
         display: block;
 
-        &:hover{
+        &:hover {
 
-            img{
+            img {
                 opacity: 90%;
             }
 
-            .menu-list--price{
+            .menu-list--price {
 
-                >.price{
+                >.price {
                     color: #FFB577;
                 }
             }
@@ -143,7 +162,7 @@
     }
 }
 
-.menu-list--img{
+.menu-list--img {
     display: block;
 
     max-width: 100%;
@@ -151,7 +170,7 @@
     transition: opacity .2s linear;
 }
 
-.menu-list--price{
+.menu-list--price {
     min-height: 80px;
     padding: 0 25px;
 
@@ -173,17 +192,17 @@
 
     // @include breakpoints.media-breakpoint-only(xs) {}
 
-    @include breakpoints.media-breakpoint-down(lg){
+    @include breakpoints.media-breakpoint-down(lg) {
         padding: 0 10px;
         font-size: 16px;
     }
 
-    >.title{
+    >.title {
         font-family: f203;
         color: #FFFFFF;
     }
 
-    >.price{
+    >.price {
         font-family: f102;
 
         color: #FFFFFF;
@@ -191,10 +210,10 @@
     }
 }
 
-.menu-list--title{
-    margin: 10px 0 50px 0;
+.menu-list--title {
+    margin: 20px 0 40px 0;
 
-    >.t{
+    >.t {
         font-family: f203;
         font-size: 14px;
 
@@ -202,7 +221,7 @@
     }
 }
 
-.menu--link{
+.menu--link {
     margin-top: 35px;
 
     display: flex;

@@ -1,18 +1,20 @@
 @use '../../../settings/breakpoints';
 
-.blog{
+.blog {
     margin: 150px 0;
 }
 
-.blog--article{
+.blog--article {
 
-    h2{
+    h2 {
         font-family: f203;
         font-size: 42px;
 
         color: #FFFFFF;
         text-align: center;
-        
+
+        line-height: 1.4;
+
         @include breakpoints.media-breakpoint-only(xl) {
             font-size: 42px;
         }
@@ -35,53 +37,53 @@
     }
 }
 
-.blog-cards{
+.blog-cards {
     margin-top: 50px;
 
-    >.item{
+    >.item {
         margin: 25px 0 25px 0;
 
-        &:first-child{
+        &:first-child {
             margin: 0 0 25px 0;
         }
 
-        &:last-child{
+        &:last-child {
             margin: 25px 0 0 0;
         }
     }
 }
 
-.blog-card{
+.blog-card {
     display: grid;
     grid-template-columns: 500px 1fr;
 
     // @include breakpoints.media-breakpoint-only(xl) {}
-    
+
     @include breakpoints.media-breakpoint-only(lg) {
         grid-template-columns: 400px 1fr;
     }
-    
+
     @include breakpoints.media-breakpoint-only(md) {
         grid-template-columns: auto;
     }
-    
+
     @include breakpoints.media-breakpoint-only(sm) {
         grid-template-columns: auto;
     }
-    
+
     @include breakpoints.media-breakpoint-only(xs) {
         grid-template-columns: auto;
     }
 
-    >.img{
+    >.img {
 
-        img{
+        img {
             display: block;
             max-width: 100%;
         }
     }
 
-    >.b{
+    >.b {
         display: grid;
         grid-template-rows: auto auto 1fr auto;
 
@@ -90,92 +92,91 @@
         color: #B8B8B8;
 
         // @include breakpoints.media-breakpoint-only(xl) {}
-    
+
         // @include breakpoints.media-breakpoint-only(lg) {}
-        
+
         // @include breakpoints.media-breakpoint-only(md) {}
-        
+
         // @include breakpoints.media-breakpoint-only(sm) {}
-        
+
         // @include breakpoints.media-breakpoint-only(xs) {}
 
-        @include breakpoints.media-breakpoint-down(lg){
+        @include breakpoints.media-breakpoint-down(lg) {
             padding-left: 0;
             padding-top: 25px;
         }
 
-        >.time{
+        >.time {
             font-size: 12px;
         }
 
-        >.title{
+        >.title {
             padding-top: 10px;
 
-            font-family: f203;
-            font-size: 18px;
-    
-            color: #FFFFFF;
-    
-            @include breakpoints.media-breakpoint-only(xl) {
-                font-size: 18px;
-            }
-    
-            @include breakpoints.media-breakpoint-only(lg) {
-                font-size: 18px;
-            }
-    
-            @include breakpoints.media-breakpoint-only(md) {
-                font-size: 16px;
-            }
-    
-            @include breakpoints.media-breakpoint-only(sm) {
-                font-size: 16px;
-            }
-    
-            @include breakpoints.media-breakpoint-only(xs) {
-                font-size: 16px;
+            >h3 {
+
+                font-family: f203;
+                font-size: 22px;
+
+                color: #FFFFFF;
+
+                // @include breakpoints.media-breakpoint-only(xl) {}
+
+                // @include breakpoints.media-breakpoint-only(lg) {}
+
+                // @include breakpoints.media-breakpoint-only(md) {}
+
+                // @include breakpoints.media-breakpoint-only(sm) {}
+
+                // @include breakpoints.media-breakpoint-only(xs) {}
+
+                @include breakpoints.media-breakpoint-down(lg) {
+                    font-size: 18px;
+                }
             }
         }
 
-        >.text{
+        >.text {
             padding-top: 10px;
 
-            p{
+            p {
                 margin: 0;
                 padding: 0;
 
                 font-size: 16px;
 
+                line-height: 1.4;
+
                 // @include breakpoints.media-breakpoint-only(xl) {}
-    
+
                 // @include breakpoints.media-breakpoint-only(lg) {}
-                
+
                 // @include breakpoints.media-breakpoint-only(md) {}
-                
+
                 // @include breakpoints.media-breakpoint-only(sm) {}
-                
+
                 // @include breakpoints.media-breakpoint-only(xs) {}
 
-                @include breakpoints.media-breakpoint-down(lg){
+                @include breakpoints.media-breakpoint-down(lg) {
                     font-size: 14px;
                 }
             }
         }
 
-        >.more{
+        >.more {
             text-align: right;
 
             // @include breakpoints.media-breakpoint-only(xl) {}
-    
+
             // @include breakpoints.media-breakpoint-only(lg) {}
-            
+
             // @include breakpoints.media-breakpoint-only(md) {}
-            
+
             // @include breakpoints.media-breakpoint-only(sm) {}
-            
+
             // @include breakpoints.media-breakpoint-only(xs) {}
 
-            @include breakpoints.media-breakpoint-down(lg){
+            @include breakpoints.media-breakpoint-down(lg) {
                 padding-top: 15px;
             }
         }

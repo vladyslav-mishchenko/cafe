@@ -1,11 +1,11 @@
 @use '../../../settings/breakpoints';
 
-.quote{
+.quote {
     margin: 150px 0;
     background-color: #1F1D21;
 }
 
-.b-quote{
+.b-quote {
     display: grid;
     grid-template-columns: 45% 55%;
 
@@ -19,12 +19,12 @@
 
     // @include breakpoints.media-breakpoint-only(xs) {}
 
-    @include breakpoints.media-breakpoint-down(lg){
+    @include breakpoints.media-breakpoint-down(lg) {
         grid-template-columns: auto;
         gap: 20px;
     }
 
-    >.c1{
+    >.c1 {
         align-self: center;
 
         // @include breakpoints.media-breakpoint-only(xl) {}
@@ -37,16 +37,16 @@
 
         // @include breakpoints.media-breakpoint-only(xs) {}
 
-        @include breakpoints.media-breakpoint-down(lg){
+        @include breakpoints.media-breakpoint-down(lg) {
             align-self: auto;
             padding-top: 25px;
         }
     }
 
-    >.c2{}
+    >.c2 {}
 }
 
-.quote-info{
+.quote-info {
     width: 80%;
     margin: 0 auto;
 
@@ -67,16 +67,16 @@
     }
 }
 
-.quote-video{
+.quote-video {
     display: block;
     aspect-ratio: 16/9;
     width: 100%;
 }
 
-.quote-text{
+.quote-text {
     color: #FFFFFF;
 
-    .icon{
+    .icon {
         font-size: 16px;
 
         // @include breakpoints.media-breakpoint-only(xl) {}
@@ -89,17 +89,19 @@
 
         // @include breakpoints.media-breakpoint-only(xs) {}
 
-        @include breakpoints.media-breakpoint-down(lg){
+        @include breakpoints.media-breakpoint-down(lg) {
             font-size: 14px;
         }
     }
 
-    p{
-        margin: 10px 0 0 0;
+    p {
+        margin: 15px 0 0 0;
         padding: 0;
 
         font-family: f202;
         font-size: 32px;
+
+        line-height: 1.5;
 
         @include breakpoints.media-breakpoint-only(xl) {
             font-size: 24px;
@@ -123,37 +125,38 @@
     }
 }
 
-.quote-author{
+.quote-author {
     display: grid;
     grid-template-columns: 1fr auto;
 
     margin-top: 25px;
 
-    >.c1{
+    >.c1 {
         border-bottom: 1px solid #474747;
         padding-bottom: 15px;
     }
 
-    >.c2{
+    >.c2 {
         border-bottom: 2px solid #FFFFFF;
         padding-bottom: 15px;
 
-        img{
+        img {
             width: 48px;
             height: 48px;
         }
     }
 }
 
-.quote-author--info{
+.quote-author--info {
     font-family: f102;
 
-    >.name{
+    >.name {
         color: #FFFFFF;
         font-size: 14px;
     }
 
-    >.location{
+    >.location {
+        padding-top: 7px;
         color: #797979;
         font-size: 12px;
     }
