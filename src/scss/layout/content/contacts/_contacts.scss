@@ -73,14 +73,14 @@
     }
 
     >.item {
-        margin: 25px 0 25px 0;
+        margin: 20px 0 20px 0;
 
         &:first-child {
-            margin: 0 0 25px 0;
+            margin: 0 0 20px 0;
         }
 
         &:last-child {
-            margin: 25px 0 0 0;
+            margin: 20px 0 0 0;
         }
 
         font-family: f203;
@@ -90,17 +90,17 @@
 }
 
 .contacts-sublist {
-    padding-top: 15px;
+    padding-top: 10px;
 
     >.item {
-        margin: 10px 0 10px 0;
+        margin: 5px 0 5px 0;
 
         &:first-child {
-            margin: 0 0 10px 0;
+            margin: 0 0 5px 0;
         }
 
         &:last-child {
-            margin: 10px 0 0 0;
+            margin: 5px 0 0 0;
         }
 
         &:only-child {

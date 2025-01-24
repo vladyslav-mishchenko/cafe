@@ -68,8 +68,6 @@
         font-size: 58px;
         color: #FFFFFF;
 
-        line-height: 1.4;
-
         @include breakpoints.media-breakpoint-only(xl) {
             font-size: 48px;
         }
@@ -97,8 +95,6 @@
 
         font-size: 16px;
         color: #B8B8B8;
-
-        line-height: 1.4;
 
         // @include breakpoints.media-breakpoint-only(xl) {}
 
@@ -171,21 +167,21 @@
 }
 
 .main-info--sublist {
-    padding-top: 10px;
+    padding-top: 5px;
 
     >.item {
         font-family: f101;
         font-size: 16px;
         color: #B8B8B8;
 
-        margin: 10px 0 10px 0;
+        margin: 5px 0 5px 0;
 
         &:first-child {
-            margin: 0 0 10px 0;
+            margin: 0 0 5px 0;
         }
 
         &:last-child {
-            margin: 10px 0 0 0;
+            margin: 5px 0 0 0;
         }
 
         &:only-child {
