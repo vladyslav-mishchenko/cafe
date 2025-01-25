@@ -8,6 +8,6 @@ services:
     image: cafe:latest
     container_name: cafe
     volumes:
-     - .:/app
+      - .:/app
     ports:
-     - '7777:7777'
+      - '7777:7777'

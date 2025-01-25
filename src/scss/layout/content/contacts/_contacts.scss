@@ -1,29 +1,47 @@
 @use '../../../settings/breakpoints';
 
 .contacts {
-    margin-top: 150px;
+  margin-top: 150px;
 
-    // @include breakpoints.media-breakpoint-only(xl) {}
+  // @include breakpoints.media-breakpoint-only(xl) {}
 
-    // @include breakpoints.media-breakpoint-only(lg) {}
+  // @include breakpoints.media-breakpoint-only(lg) {}
 
-    // @include breakpoints.media-breakpoint-only(md) {}
+  // @include breakpoints.media-breakpoint-only(md) {}
 
-    // @include breakpoints.media-breakpoint-only(sm) {}
+  // @include breakpoints.media-breakpoint-only(sm) {}
 
-    // @include breakpoints.media-breakpoint-only(xs) {}
+  // @include breakpoints.media-breakpoint-only(xs) {}
 
-    @include breakpoints.media-breakpoint-down(lg) {
-        margin-bottom: 100px;
-    }
+  @include breakpoints.media-breakpoint-down(lg) {
+    margin-bottom: 100px;
+  }
 }
 
 .b-contacts {
-    display: grid;
-    grid-template-columns: 450px 1fr;
+  display: grid;
+  grid-template-columns: 450px 1fr;
 
-    background-color: #1F1D21;
+  background-color: #1f1d21;
 
+  // @include breakpoints.media-breakpoint-only(xl) {}
+
+  // @include breakpoints.media-breakpoint-only(lg) {}
+
+  // @include breakpoints.media-breakpoint-only(md) {}
+
+  // @include breakpoints.media-breakpoint-only(sm) {}
+
+  // @include breakpoints.media-breakpoint-only(xs) {}
+
+  @include breakpoints.media-breakpoint-down(lg) {
+    grid-template-columns: auto;
+  }
+
+  > .c1 {
+  }
+
+  > .c2 {
     // @include breakpoints.media-breakpoint-only(xl) {}
 
     // @include breakpoints.media-breakpoint-only(lg) {}
@@ -35,84 +53,67 @@
     // @include breakpoints.media-breakpoint-only(xs) {}
 
     @include breakpoints.media-breakpoint-down(lg) {
-        grid-template-columns: auto;
+      min-height: 450px;
     }
-
-    >.c1 {}
-
-    >.c2 {
-        // @include breakpoints.media-breakpoint-only(xl) {}
-
-        // @include breakpoints.media-breakpoint-only(lg) {}
-
-        // @include breakpoints.media-breakpoint-only(md) {}
-
-        // @include breakpoints.media-breakpoint-only(sm) {}
-
-        // @include breakpoints.media-breakpoint-only(xs) {}
-
-        @include breakpoints.media-breakpoint-down(lg) {
-            min-height: 450px;
-        }
-    }
+  }
 }
 
 .contacts-list {
-    padding: 50px 0 50px 50px;
+  padding: 50px 0 50px 50px;
 
-    // @include breakpoints.media-breakpoint-only(xl) {}
+  // @include breakpoints.media-breakpoint-only(xl) {}
 
-    // @include breakpoints.media-breakpoint-only(lg) {}
+  // @include breakpoints.media-breakpoint-only(lg) {}
 
-    // @include breakpoints.media-breakpoint-only(md) {}
+  // @include breakpoints.media-breakpoint-only(md) {}
 
-    // @include breakpoints.media-breakpoint-only(sm) {}
+  // @include breakpoints.media-breakpoint-only(sm) {}
 
-    @include breakpoints.media-breakpoint-only(xs) {
-        padding: 20px 0 50px 20px;
+  @include breakpoints.media-breakpoint-only(xs) {
+    padding: 20px 0 50px 20px;
+  }
+
+  > .item {
+    margin: 20px 0 20px 0;
+
+    &:first-child {
+      margin: 0 0 20px 0;
     }
 
-    >.item {
-        margin: 20px 0 20px 0;
-
-        &:first-child {
-            margin: 0 0 20px 0;
-        }
-
-        &:last-child {
-            margin: 20px 0 0 0;
-        }
-
-        font-family: f203;
-        font-size: 20px;
-        color: #FFFFFF;
+    &:last-child {
+      margin: 20px 0 0 0;
     }
+
+    font-family: f203;
+    font-size: 20px;
+    color: #ffffff;
+  }
 }
 
 .contacts-sublist {
-    padding-top: 10px;
+  padding-top: 10px;
 
-    >.item {
-        margin: 5px 0 5px 0;
+  > .item {
+    margin: 5px 0 5px 0;
 
-        &:first-child {
-            margin: 0 0 5px 0;
-        }
-
-        &:last-child {
-            margin: 5px 0 0 0;
-        }
-
-        &:only-child {
-            margin: 0 0 0 0;
-        }
-
-        font-family: f101;
-        font-size: 14px;
-        color: #B8B8B8;
+    &:first-child {
+      margin: 0 0 5px 0;
     }
+
+    &:last-child {
+      margin: 5px 0 0 0;
+    }
+
+    &:only-child {
+      margin: 0 0 0 0;
+    }
+
+    font-family: f101;
+    font-size: 14px;
+    color: #b8b8b8;
+  }
 }
 
 #map {
-    height: 100%;
+  height: 100%;
 }

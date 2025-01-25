@@ -1,67 +1,83 @@
 @use '../../../settings/breakpoints';
 
 .menu {
-    margin: 150px 0;
+  margin: 150px 0;
 }
 
 .menu--article {
+  h2 {
+    font-family: f203;
+    font-size: 42px;
 
-    h2 {
-        font-family: f203;
-        font-size: 42px;
+    color: #ffffff;
 
-        color: #FFFFFF;
+    line-height: 1.4;
 
-        line-height: 1.4;
-
-        @include breakpoints.media-breakpoint-only(xl) {
-            font-size: 42px;
-        }
-
-        @include breakpoints.media-breakpoint-only(lg) {
-            font-size: 38px;
-        }
-
-        @include breakpoints.media-breakpoint-only(md) {
-            font-size: 22px;
-        }
-
-        @include breakpoints.media-breakpoint-only(sm) {
-            font-size: 22px;
-        }
-
-        @include breakpoints.media-breakpoint-only(xs) {
-            font-size: 22px;
-        }
+    @include breakpoints.media-breakpoint-only(xl) {
+      font-size: 42px;
     }
 
-    p {
-        color: #B8B8B8;
-        font-size: 16px;
-
-        line-height: 1.4;
-
-        // @include breakpoints.media-breakpoint-only(xl) {}
-
-        // @include breakpoints.media-breakpoint-only(lg) {}
-
-        // @include breakpoints.media-breakpoint-only(md) {}
-
-        // @include breakpoints.media-breakpoint-only(sm) {}
-
-        // @include breakpoints.media-breakpoint-only(xs) {}
-
-        @include breakpoints.media-breakpoint-down(xl) {
-            font-size: 14px;
-        }
+    @include breakpoints.media-breakpoint-only(lg) {
+      font-size: 38px;
     }
+
+    @include breakpoints.media-breakpoint-only(md) {
+      font-size: 22px;
+    }
+
+    @include breakpoints.media-breakpoint-only(sm) {
+      font-size: 22px;
+    }
+
+    @include breakpoints.media-breakpoint-only(xs) {
+      font-size: 22px;
+    }
+  }
+
+  p {
+    color: #b8b8b8;
+    font-size: 16px;
+
+    line-height: 1.4;
+
+    // @include breakpoints.media-breakpoint-only(xl) {}
+
+    // @include breakpoints.media-breakpoint-only(lg) {}
+
+    // @include breakpoints.media-breakpoint-only(md) {}
+
+    // @include breakpoints.media-breakpoint-only(sm) {}
+
+    // @include breakpoints.media-breakpoint-only(xs) {}
+
+    @include breakpoints.media-breakpoint-down(xl) {
+      font-size: 14px;
+    }
+  }
 }
 
 .b-menu {
-    display: grid;
-    grid-template-columns: 60% 40%;
+  display: grid;
+  grid-template-columns: 60% 40%;
 
-    padding-top: 35px;
+  padding-top: 35px;
+
+  // @include breakpoints.media-breakpoint-only(xl) {}
+
+  // @include breakpoints.media-breakpoint-only(lg) {}
+
+  // @include breakpoints.media-breakpoint-only(md) {}
+
+  // @include breakpoints.media-breakpoint-only(sm) {}
+
+  // @include breakpoints.media-breakpoint-only(xs) {}
+
+  @include breakpoints.media-breakpoint-down(lg) {
+    grid-template-columns: auto;
+  }
+
+  > .c1 {
+    padding-right: 50px;
 
     // @include breakpoints.media-breakpoint-only(xl) {}
 
@@ -74,157 +90,138 @@
     // @include breakpoints.media-breakpoint-only(xs) {}
 
     @include breakpoints.media-breakpoint-down(lg) {
-        grid-template-columns: auto;
+      padding-right: 0;
     }
+  }
 
-    >.c1 {
-        padding-right: 50px;
+  > .c2 {
+    // @include breakpoints.media-breakpoint-only(xl) {}
 
-        // @include breakpoints.media-breakpoint-only(xl) {}
+    // @include breakpoints.media-breakpoint-only(lg) {}
 
-        // @include breakpoints.media-breakpoint-only(lg) {}
+    // @include breakpoints.media-breakpoint-only(md) {}
 
-        // @include breakpoints.media-breakpoint-only(md) {}
+    // @include breakpoints.media-breakpoint-only(sm) {}
 
-        // @include breakpoints.media-breakpoint-only(sm) {}
+    // @include breakpoints.media-breakpoint-only(xs) {}
 
-        // @include breakpoints.media-breakpoint-only(xs) {}
-
-        @include breakpoints.media-breakpoint-down(lg) {
-            padding-right: 0;
-        }
+    @include breakpoints.media-breakpoint-down(lg) {
+      padding-top: 10px;
     }
-
-    >.c2 {
-
-        // @include breakpoints.media-breakpoint-only(xl) {}
-
-        // @include breakpoints.media-breakpoint-only(lg) {}
-
-        // @include breakpoints.media-breakpoint-only(md) {}
-
-        // @include breakpoints.media-breakpoint-only(sm) {}
-
-        // @include breakpoints.media-breakpoint-only(xs) {}
-
-        @include breakpoints.media-breakpoint-down(lg) {
-            padding-top: 10px;
-        }
-    }
+  }
 }
 
 .menu-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
 
-    // @include breakpoints.media-breakpoint-only(xl) {}
+  // @include breakpoints.media-breakpoint-only(xl) {}
 
-    // @include breakpoints.media-breakpoint-only(lg) {}
+  // @include breakpoints.media-breakpoint-only(lg) {}
 
-    // @include breakpoints.media-breakpoint-only(md) {}
+  // @include breakpoints.media-breakpoint-only(md) {}
 
-    // @include breakpoints.media-breakpoint-only(sm) {}
+  // @include breakpoints.media-breakpoint-only(sm) {}
 
-    // @include breakpoints.media-breakpoint-only(xs) {}
+  // @include breakpoints.media-breakpoint-only(xs) {}
 
-    @include breakpoints.media-breakpoint-down(lg) {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
+  @include breakpoints.media-breakpoint-down(lg) {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
 
-    @include breakpoints.media-breakpoint-down(sm) {
-        grid-template-columns: auto;
-    }
+  @include breakpoints.media-breakpoint-down(sm) {
+    grid-template-columns: auto;
+  }
 
-    >.item {}
+  > .item {
+  }
 }
 
 .menu-list--card {
-    background-color: #1F1D21;
+  background-color: #1f1d21;
 
-    .link {
-        display: block;
+  .link {
+    display: block;
 
-        &:hover {
+    &:hover {
+      img {
+        opacity: 90%;
+      }
 
-            img {
-                opacity: 90%;
-            }
-
-            .menu-list--price {
-
-                >.price {
-                    color: #FFB577;
-                }
-            }
+      .menu-list--price {
+        > .price {
+          color: #ffb577;
         }
+      }
     }
+  }
 }
 
 .menu-list--img {
-    display: block;
+  display: block;
 
-    max-width: 100%;
-    opacity: 100%;
-    transition: opacity .2s linear;
+  max-width: 100%;
+  opacity: 100%;
+  transition: opacity 0.2s linear;
 }
 
 .menu-list--price {
-    min-height: 80px;
-    padding: 0 25px;
+  min-height: 80px;
+  padding: 0 25px;
 
-    font-size: 20px;
+  font-size: 20px;
 
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
 
-    // @include breakpoints.media-breakpoint-only(xl) {}
+  // @include breakpoints.media-breakpoint-only(xl) {}
 
-    @include breakpoints.media-breakpoint-only(lg) {
-        padding: 0 15px;
-    }
+  @include breakpoints.media-breakpoint-only(lg) {
+    padding: 0 15px;
+  }
 
-    // @include breakpoints.media-breakpoint-only(md) {}
+  // @include breakpoints.media-breakpoint-only(md) {}
 
-    // @include breakpoints.media-breakpoint-only(sm) {}
+  // @include breakpoints.media-breakpoint-only(sm) {}
 
-    // @include breakpoints.media-breakpoint-only(xs) {}
+  // @include breakpoints.media-breakpoint-only(xs) {}
 
-    @include breakpoints.media-breakpoint-down(lg) {
-        padding: 0 10px;
-        font-size: 16px;
-    }
+  @include breakpoints.media-breakpoint-down(lg) {
+    padding: 0 10px;
+    font-size: 16px;
+  }
 
-    >.title {
-        font-family: f203;
-        color: #FFFFFF;
-    }
+  > .title {
+    font-family: f203;
+    color: #ffffff;
+  }
 
-    >.price {
-        font-family: f102;
+  > .price {
+    font-family: f102;
 
-        color: #FFFFFF;
-        transition: color .2s linear;
-    }
+    color: #ffffff;
+    transition: color 0.2s linear;
+  }
 }
 
 .menu-list--title {
-    margin: 20px 0 40px 0;
+  margin: 20px 0 40px 0;
 
-    >.t {
-        font-family: f203;
-        font-size: 14px;
+  > .t {
+    font-family: f203;
+    font-size: 14px;
 
-        color: #C4E4EA;
-    }
+    color: #c4e4ea;
+  }
 }
 
 .menu--link {
-    margin-top: 35px;
+  margin-top: 35px;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

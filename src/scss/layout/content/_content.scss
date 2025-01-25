@@ -8,24 +8,24 @@
 @use './blog/blog';
 @use './contacts/contacts';
 
-.content{
-    padding-top: 80px;
+.content {
+  padding-top: 80px;
 
-    @include breakpoints.media-breakpoint-only(xl) {
-        padding-top: 50px;
-    }
+  @include breakpoints.media-breakpoint-only(xl) {
+    padding-top: 50px;
+  }
 
-    @include breakpoints.media-breakpoint-only(lg) {
-        padding-top: 45px;
-    }
+  @include breakpoints.media-breakpoint-only(lg) {
+    padding-top: 45px;
+  }
 
-    // @include breakpoints.media-breakpoint-only(md) {}
+  // @include breakpoints.media-breakpoint-only(md) {}
 
-    // @include breakpoints.media-breakpoint-only(sm) {}
+  // @include breakpoints.media-breakpoint-only(sm) {}
 
-    // @include breakpoints.media-breakpoint-only(xs) {}
+  // @include breakpoints.media-breakpoint-only(xs) {}
 
-    @include breakpoints.media-breakpoint-down(lg){
-        padding-top: 40px;
-    }
+  @include breakpoints.media-breakpoint-down(lg) {
+    padding-top: 40px;
+  }
 }

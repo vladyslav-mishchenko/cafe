@@ -1,20 +1,40 @@
 @use '../settings/breakpoints';
 
-.to-page-link{
-    background-color: #FFB577;
-    transition: background-color .2s linear;
+.to-page-link {
+  background-color: #ffb577;
+  transition: background-color 0.2s linear;
 
-    display: inline-flex;
-    align-items: center;
+  display: inline-flex;
+  align-items: center;
 
-    width: auto;
-    height: 48px;
+  width: auto;
+  height: 48px;
 
-    padding: 0 25px;
+  padding: 0 25px;
 
-    &:hover{
-        background-color: #FFC492;
-    }
+  &:hover {
+    background-color: #ffc492;
+  }
+
+  // @include breakpoints.media-breakpoint-only(xl) {}
+
+  // @include breakpoints.media-breakpoint-only(lg) {}
+
+  // @include breakpoints.media-breakpoint-only(md) {}
+
+  // @include breakpoints.media-breakpoint-only(sm) {}
+
+  // @include breakpoints.media-breakpoint-only(xs) {}
+
+  @include breakpoints.media-breakpoint-down(lg) {
+    height: 32px;
+    padding: 0 15px;
+  }
+
+  .t {
+    font-family: f102;
+    font-size: 16px;
+    color: #2e2d33;
 
     // @include breakpoints.media-breakpoint-only(xl) {}
 
@@ -26,34 +46,14 @@
 
     // @include breakpoints.media-breakpoint-only(xs) {}
 
-    @include breakpoints.media-breakpoint-down(lg){
-        height: 32px;
-        padding: 0 15px;
+    @include breakpoints.media-breakpoint-down(lg) {
+      font-size: 14px;
     }
+  }
 
-    .t{
-        font-family: f102;
-        font-size: 16px;
-        color: #2E2D33;
-
-        // @include breakpoints.media-breakpoint-only(xl) {}
-
-        // @include breakpoints.media-breakpoint-only(lg) {}
-
-        // @include breakpoints.media-breakpoint-only(md) {}
-
-        // @include breakpoints.media-breakpoint-only(sm) {}
-
-        // @include breakpoints.media-breakpoint-only(xs) {}
-
-        @include breakpoints.media-breakpoint-down(lg){
-            font-size: 14px;
-        }
-    }
-
-    .icon{
-        padding-left: 10px;
-        font-size: 8px;
-        color: #2E2D33;
-    }
+  .icon {
+    padding-left: 10px;
+    font-size: 8px;
+    color: #2e2d33;
+  }
 }

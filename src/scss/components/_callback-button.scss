@@ -1,37 +1,36 @@
-.callback-button{
-    margin: 0;
-    padding: 0;
-    background: none;
-    border: none;
-    outline: none;
+.callback-button {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
 
-    height: 35px;
+  height: 35px;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
-    .t{
-        padding-right: 5px;
-        
-        font-family: f102;
-        font-size: 14px;
+  .t {
+    padding-right: 5px;
 
-        color: #FFC492;
+    font-family: f102;
+    font-size: 14px;
+
+    color: #ffc492;
+  }
+
+  .icon {
+    font-size: 10px;
+    color: #ffffff;
+    transition: color 0.2s linear;
+  }
+
+  &:hover {
+    .icon {
+      color: #ffc492;
     }
-
-    .icon{
-        font-size: 10px;
-        color: #FFFFFF;
-        transition: color .2s linear;
-    }
-
-    &:hover{
-
-        .icon{
-            color: #FFC492;
-        }
-    }
+  }
 }

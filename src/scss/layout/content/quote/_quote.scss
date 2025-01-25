@@ -1,13 +1,31 @@
 @use '../../../settings/breakpoints';
 
 .quote {
-    margin: 150px 0;
-    background-color: #1F1D21;
+  margin: 150px 0;
+  background-color: #1f1d21;
 }
 
 .b-quote {
-    display: grid;
-    grid-template-columns: 45% 55%;
+  display: grid;
+  grid-template-columns: 45% 55%;
+
+  // @include breakpoints.media-breakpoint-only(xl) {}
+
+  // @include breakpoints.media-breakpoint-only(lg) {}
+
+  // @include breakpoints.media-breakpoint-only(md) {}
+
+  // @include breakpoints.media-breakpoint-only(sm) {}
+
+  // @include breakpoints.media-breakpoint-only(xs) {}
+
+  @include breakpoints.media-breakpoint-down(lg) {
+    grid-template-columns: auto;
+    gap: 20px;
+  }
+
+  > .c1 {
+    align-self: center;
 
     // @include breakpoints.media-breakpoint-only(xl) {}
 
@@ -20,144 +38,127 @@
     // @include breakpoints.media-breakpoint-only(xs) {}
 
     @include breakpoints.media-breakpoint-down(lg) {
-        grid-template-columns: auto;
-        gap: 20px;
+      align-self: auto;
+      padding-top: 25px;
     }
+  }
 
-    >.c1 {
-        align-self: center;
-
-        // @include breakpoints.media-breakpoint-only(xl) {}
-
-        // @include breakpoints.media-breakpoint-only(lg) {}
-
-        // @include breakpoints.media-breakpoint-only(md) {}
-
-        // @include breakpoints.media-breakpoint-only(sm) {}
-
-        // @include breakpoints.media-breakpoint-only(xs) {}
-
-        @include breakpoints.media-breakpoint-down(lg) {
-            align-self: auto;
-            padding-top: 25px;
-        }
-    }
-
-    >.c2 {}
+  > .c2 {
+  }
 }
 
 .quote-info {
-    width: 80%;
-    margin: 0 auto;
+  width: 80%;
+  margin: 0 auto;
+
+  // @include breakpoints.media-breakpoint-only(xl) {}
+
+  // @include breakpoints.media-breakpoint-only(lg) {}
+
+  @include breakpoints.media-breakpoint-only(md) {
+    width: 65%;
+  }
+
+  // @include breakpoints.media-breakpoint-only(sm) {}
+
+  @include breakpoints.media-breakpoint-only(xs) {
+    width: auto;
+    margin: 0;
+    padding: 0 15px;
+  }
+}
+
+.quote-video {
+  display: block;
+  aspect-ratio: 16/9;
+  width: 100%;
+}
+
+.quote-text {
+  color: #ffffff;
+
+  .icon {
+    font-size: 16px;
 
     // @include breakpoints.media-breakpoint-only(xl) {}
 
     // @include breakpoints.media-breakpoint-only(lg) {}
 
-    @include breakpoints.media-breakpoint-only(md) {
-        width: 65%;
-    }
+    // @include breakpoints.media-breakpoint-only(md) {}
 
     // @include breakpoints.media-breakpoint-only(sm) {}
 
+    // @include breakpoints.media-breakpoint-only(xs) {}
+
+    @include breakpoints.media-breakpoint-down(lg) {
+      font-size: 14px;
+    }
+  }
+
+  p {
+    margin: 15px 0 0 0;
+    padding: 0;
+
+    font-family: f202;
+    font-size: 32px;
+
+    line-height: 1.5;
+
+    @include breakpoints.media-breakpoint-only(xl) {
+      font-size: 24px;
+    }
+
+    @include breakpoints.media-breakpoint-only(lg) {
+      font-size: 20px;
+    }
+
+    @include breakpoints.media-breakpoint-only(md) {
+      font-size: 20px;
+    }
+
+    @include breakpoints.media-breakpoint-only(sm) {
+      font-size: 20px;
+    }
+
     @include breakpoints.media-breakpoint-only(xs) {
-        width: auto;
-        margin: 0;
-        padding: 0 15px;
+      font-size: 18px;
     }
-}
-
-.quote-video {
-    display: block;
-    aspect-ratio: 16/9;
-    width: 100%;
-}
-
-.quote-text {
-    color: #FFFFFF;
-
-    .icon {
-        font-size: 16px;
-
-        // @include breakpoints.media-breakpoint-only(xl) {}
-
-        // @include breakpoints.media-breakpoint-only(lg) {}
-
-        // @include breakpoints.media-breakpoint-only(md) {}
-
-        // @include breakpoints.media-breakpoint-only(sm) {}
-
-        // @include breakpoints.media-breakpoint-only(xs) {}
-
-        @include breakpoints.media-breakpoint-down(lg) {
-            font-size: 14px;
-        }
-    }
-
-    p {
-        margin: 15px 0 0 0;
-        padding: 0;
-
-        font-family: f202;
-        font-size: 32px;
-
-        line-height: 1.5;
-
-        @include breakpoints.media-breakpoint-only(xl) {
-            font-size: 24px;
-        }
-
-        @include breakpoints.media-breakpoint-only(lg) {
-            font-size: 20px;
-        }
-
-        @include breakpoints.media-breakpoint-only(md) {
-            font-size: 20px;
-        }
-
-        @include breakpoints.media-breakpoint-only(sm) {
-            font-size: 20px;
-        }
-
-        @include breakpoints.media-breakpoint-only(xs) {
-            font-size: 18px;
-        }
-    }
+  }
 }
 
 .quote-author {
-    display: grid;
-    grid-template-columns: 1fr auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
 
-    margin-top: 25px;
+  margin-top: 25px;
 
-    >.c1 {
-        border-bottom: 1px solid #474747;
-        padding-bottom: 15px;
+  > .c1 {
+    border-bottom: 1px solid #474747;
+    padding-bottom: 15px;
+  }
+
+  > .c2 {
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 15px;
+
+    img {
+      width: 48px;
+      height: 48px;
     }
-
-    >.c2 {
-        border-bottom: 2px solid #FFFFFF;
-        padding-bottom: 15px;
-
-        img {
-            width: 48px;
-            height: 48px;
-        }
-    }
+  }
 }
 
 .quote-author--info {
-    font-family: f102;
+  font-family: f102;
 
-    >.name {
-        color: #FFFFFF;
-        font-size: 14px;
-    }
+  > .name {
+    color: #ffffff;
+    font-size: 14px;
+  }
 
-    >.location {
-        padding-top: 7px;
-        color: #797979;
-        font-size: 12px;
-    }
+  > .location {
+    padding-top: 7px;
+    color: #797979;
+    font-size: 12px;
+  }
 }
