@@ -27,6 +27,7 @@
   "dependencies": {
     "@fontsource/playfair-display": "^5.1.1",
     "@fontsource/poppins": "^5.1.1",
+    "@googlemaps/js-api-loader": "^1.16.8",
     "path": "^0.12.7",
     "resolve": "^1.22.4"
   }
