@@ -1,8 +1,8 @@
-import { Loader } from "@googlemaps/js-api-loader"
+import { Loader } from '@googlemaps/js-api-loader';
 
 const loader = new Loader({
-  apiKey: "apikey",
-  version: "weekly",
+  apiKey: 'mapid',
+  version: 'weekly',
 });
 
 const mapOptions = {
@@ -88,13 +88,13 @@ const mapOptions = {
       stylers: [{ color: '#17263c' }],
     },
   ],
-}
+};
 
 loader
   .importLibrary('maps')
-  .then(({Map}) => {
-    new Map(document.getElementById("map"), mapOptions);
+  .then(({ Map }) => {
+    new Map(document.getElementById('map'), mapOptions);
   })
   .catch((e) => {
     console.log(e);
-});
+  });
