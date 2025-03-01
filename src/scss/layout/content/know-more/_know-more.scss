@@ -162,7 +162,16 @@
 }
 
 .know-more-item-title {
+
   > .title {
+    height: 35px;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+
+    align-items: center;
+
     > .icon {
       font-size: 32px;
       color: #ffb577;
@@ -185,8 +194,6 @@
     }
 
     > .t {
-      margin-left: 5px;
-
       font-family: f102;
       font-size: 24px;
 
