@@ -1,0 +1,88 @@
+@use 'sass:map';
+
+// breakpoints
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+// media min-width
+$min: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+// media max-with
+$max: (
+  xs: 575.98px,
+  sm: 767.98px,
+  md: 991.98px,
+  lg: 1199.98px,
+  xl: 1399.98px,
+  xxl: 0,
+);
+
+// container max-width
+$container-max-width: (
+  xs: none,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);
+
+@function max-width($breakpoint) {
+  @return map.get($container-max-width, $breakpoint);
+}
+
+@mixin up($breakpoint) {
+  @if map.get($breakpoints, $breakpoint) != null {
+    $minwidth: map.get($min, $breakpoint);
+
+    @if $breakpoint != xs {
+      @media (min-width: $minwidth) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin down($breakpoint) {
+  @if map.get($breakpoints, $breakpoint) != null {
+    $maxwidth: map.get($max, $breakpoint);
+
+    @if $breakpoint != xxl {
+      @media (max-width: $maxwidth) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin only($breakpoint) {
+  @if map.get($breakpoints, $breakpoint) != null {
+    $minwidth: map.get($min, $breakpoint);
+    $maxwidth: map.get($max, $breakpoint);
+
+    @if $breakpoint != xxl {
+      @media (min-width: $minwidth) and (max-width: $maxwidth) {
+        @content;
+      }
+    }
+
+    @if $breakpoint == xxl {
+      @media (min-width: $minwidth) {
+        @content;
+      }
+    }
+  }
+}

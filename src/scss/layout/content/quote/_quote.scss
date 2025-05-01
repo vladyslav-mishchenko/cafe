@@ -1,46 +1,48 @@
-@use '../../../settings/breakpoints';
+@use 'sass:map';
+
+@use '../../../utils/breakpoints' as bp;
 
 .quote {
-  margin: 150px 0;
+  margin: 100px 0;
   background-color: #1f1d21;
 }
 
 .b-quote {
   display: grid;
-  grid-template-columns: 45% 55%;
+  grid-template-columns: auto;
+  gap: 20px;
 
-  // @include breakpoints.media-breakpoint-only(xl) {}
+  // breakpoints
+  // // only sm
+  // @include bp.only(sm) {
+  // }
 
-  // @include breakpoints.media-breakpoint-only(lg) {}
+  // // only md
+  // @include bp.only(md) {
+  // }
 
-  // @include breakpoints.media-breakpoint-only(md) {}
+  // // only lg
+  // @include bp.only(lg) {
+  // }
 
-  // @include breakpoints.media-breakpoint-only(sm) {}
+  // // only xl
+  // @include bp.only(xl) {
+  // }
 
-  // @include breakpoints.media-breakpoint-only(xs) {}
+  // // only xxl
+  // @include bp.only(xxl) {
+  // }
 
-  @include breakpoints.media-breakpoint-down(lg) {
-    grid-template-columns: auto;
-    gap: 20px;
+  // up lg
+  @include bp.up(lg) {
+    grid-template-columns: 45% 55%;
+    gap: 0;
   }
+  // // end breakpoints
 
   > .c1 {
-    align-self: center;
-
-    // @include breakpoints.media-breakpoint-only(xl) {}
-
-    // @include breakpoints.media-breakpoint-only(lg) {}
-
-    // @include breakpoints.media-breakpoint-only(md) {}
-
-    // @include breakpoints.media-breakpoint-only(sm) {}
-
-    // @include breakpoints.media-breakpoint-only(xs) {}
-
-    @include breakpoints.media-breakpoint-down(lg) {
-      align-self: auto;
-      padding-top: 25px;
-    }
+    align-self: auto;
+    padding-top: 25px;
   }
 
   > .c2 {
@@ -48,24 +50,9 @@
 }
 
 .quote-info {
-  width: 80%;
-  margin: 0 auto;
-
-  // @include breakpoints.media-breakpoint-only(xl) {}
-
-  // @include breakpoints.media-breakpoint-only(lg) {}
-
-  @include breakpoints.media-breakpoint-only(md) {
-    width: 65%;
-  }
-
-  // @include breakpoints.media-breakpoint-only(sm) {}
-
-  @include breakpoints.media-breakpoint-only(xs) {
-    width: auto;
-    margin: 0;
-    padding: 0 15px;
-  }
+  width: auto;
+  margin: 0;
+  padding: 0 15px;
 }
 
 .quote-video {
@@ -78,21 +65,7 @@
   color: #ffffff;
 
   .icon {
-    font-size: 16px;
-
-    // @include breakpoints.media-breakpoint-only(xl) {}
-
-    // @include breakpoints.media-breakpoint-only(lg) {}
-
-    // @include breakpoints.media-breakpoint-only(md) {}
-
-    // @include breakpoints.media-breakpoint-only(sm) {}
-
-    // @include breakpoints.media-breakpoint-only(xs) {}
-
-    @include breakpoints.media-breakpoint-down(lg) {
-      font-size: 14px;
-    }
+    font-size: 14px;
   }
 
   p {
@@ -100,29 +73,9 @@
     padding: 0;
 
     font-family: f202;
-    font-size: 32px;
+    font-size: 18px;
 
     line-height: 1.5;
-
-    @include breakpoints.media-breakpoint-only(xl) {
-      font-size: 24px;
-    }
-
-    @include breakpoints.media-breakpoint-only(lg) {
-      font-size: 20px;
-    }
-
-    @include breakpoints.media-breakpoint-only(md) {
-      font-size: 20px;
-    }
-
-    @include breakpoints.media-breakpoint-only(sm) {
-      font-size: 20px;
-    }
-
-    @include breakpoints.media-breakpoint-only(xs) {
-      font-size: 18px;
-    }
   }
 }
 

@@ -1,38 +1,46 @@
-@use '../../../settings/breakpoints';
+@use 'sass:map';
+
+@use '../../../utils/breakpoints' as bp;
 
 .blog {
-  margin: 150px 0;
+  margin: 100px 0;
 }
 
 .blog--article {
   h2 {
     font-family: f203;
-    font-size: 42px;
-
+    font-size: 24px;
     color: #ffffff;
+
     text-align: center;
 
-    line-height: 1.4;
+    line-height: 1.5;
 
-    @include breakpoints.media-breakpoint-only(xl) {
-      font-size: 42px;
+    // breakpoints
+    // // only sm
+    // @include bp.only(sm) {
+    // }
+
+    // only md
+    @include bp.only(md) {
+      font-size: 32px;
     }
 
-    @include breakpoints.media-breakpoint-only(lg) {
-      font-size: 38px;
+    // only lg
+    @include bp.only(lg) {
+      font-size: 35px;
     }
 
-    @include breakpoints.media-breakpoint-only(md) {
-      font-size: 22px;
+    // only xl
+    @include bp.only(xl) {
+      font-size: 40px;
     }
 
-    @include breakpoints.media-breakpoint-only(sm) {
-      font-size: 22px;
+    // only xxl
+    @include bp.only(xxl) {
+      font-size: 40px;
     }
-
-    @include breakpoints.media-breakpoint-only(xs) {
-      font-size: 22px;
-    }
+    // end breakpoints
   }
 }
 
@@ -54,25 +62,34 @@
 
 .blog-card {
   display: grid;
-  grid-template-columns: 500px 1fr;
+  grid-template-columns: auto;
 
-  // @include breakpoints.media-breakpoint-only(xl) {}
+  // breakpoints
+  // // only sm
+  // @include bp.only(sm) {
+  // }
 
-  @include breakpoints.media-breakpoint-only(lg) {
+  // // only md
+  // @include bp.only(md) {
+  // }
+
+  // // only lg
+  // @include bp.only(lg) {
+  // }
+
+  // // only xl
+  // @include bp.only(xl) {
+  // }
+
+  // // only xxl
+  // @include bp.only(xxl) {
+  // }
+
+  // up lg
+  @include bp.up(lg) {
     grid-template-columns: 400px 1fr;
   }
-
-  @include breakpoints.media-breakpoint-only(md) {
-    grid-template-columns: auto;
-  }
-
-  @include breakpoints.media-breakpoint-only(sm) {
-    grid-template-columns: auto;
-  }
-
-  @include breakpoints.media-breakpoint-only(xs) {
-    grid-template-columns: auto;
-  }
+  // end breakpoints
 
   > .img {
     img {
@@ -85,24 +102,35 @@
     display: grid;
     grid-template-rows: auto auto 1fr auto;
 
-    padding-left: 25px;
-
+    padding-top: 25px;
     color: #b8b8b8;
 
-    // @include breakpoints.media-breakpoint-only(xl) {}
+    // breakpoints
+    // // only sm
+    // @include bp.only(sm) {
+    // }
 
-    // @include breakpoints.media-breakpoint-only(lg) {}
+    // // only md
+    // @include bp.only(md) {
+    // }
 
-    // @include breakpoints.media-breakpoint-only(md) {}
+    // // only lg
+    // @include bp.only(lg) {
+    // }
 
-    // @include breakpoints.media-breakpoint-only(sm) {}
+    // // only xl
+    // @include bp.only(xl) {
+    // }
 
-    // @include breakpoints.media-breakpoint-only(xs) {}
+    // // only xxl
+    // @include bp.only(xxl) {
+    // }
 
-    @include breakpoints.media-breakpoint-down(lg) {
-      padding-left: 0;
-      padding-top: 25px;
+    // up lg
+    @include bp.up(lg) {
+      padding-left: 25px;
     }
+    // end breakpoints
 
     > .time {
       font-size: 12px;
@@ -113,23 +141,9 @@
 
       > h3 {
         font-family: f203;
-        font-size: 22px;
+        font-size: 18px;
 
         color: #ffffff;
-
-        // @include breakpoints.media-breakpoint-only(xl) {}
-
-        // @include breakpoints.media-breakpoint-only(lg) {}
-
-        // @include breakpoints.media-breakpoint-only(md) {}
-
-        // @include breakpoints.media-breakpoint-only(sm) {}
-
-        // @include breakpoints.media-breakpoint-only(xs) {}
-
-        @include breakpoints.media-breakpoint-down(lg) {
-          font-size: 18px;
-        }
       }
     }
 
@@ -140,42 +154,41 @@
         margin: 0;
         padding: 0;
 
-        font-size: 16px;
+        font-size: 14px;
 
         line-height: 1.4;
-
-        // @include breakpoints.media-breakpoint-only(xl) {}
-
-        // @include breakpoints.media-breakpoint-only(lg) {}
-
-        // @include breakpoints.media-breakpoint-only(md) {}
-
-        // @include breakpoints.media-breakpoint-only(sm) {}
-
-        // @include breakpoints.media-breakpoint-only(xs) {}
-
-        @include breakpoints.media-breakpoint-down(lg) {
-          font-size: 14px;
-        }
       }
     }
 
     > .more {
       text-align: right;
 
-      // @include breakpoints.media-breakpoint-only(xl) {}
+      // breakpoints
+      // // only sm
+      // @include bp.only(sm) {
+      // }
 
-      // @include breakpoints.media-breakpoint-only(lg) {}
+      // // only md
+      // @include bp.only(md) {
+      // }
 
-      // @include breakpoints.media-breakpoint-only(md) {}
+      // // only lg
+      // @include bp.only(lg) {
+      // }
 
-      // @include breakpoints.media-breakpoint-only(sm) {}
+      // // only xl
+      // @include bp.only(xl) {
+      // }
 
-      // @include breakpoints.media-breakpoint-only(xs) {}
+      // // only xxl
+      // @include bp.only(xxl) {
+      // }
 
-      @include breakpoints.media-breakpoint-down(lg) {
+      // up lg
+      @include bp.up(lg) {
         padding-top: 15px;
       }
+      // end breakpoints
     }
   }
 }

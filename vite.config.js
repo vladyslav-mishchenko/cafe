@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
-import inspect from 'vite-plugin-inspect';
 import handlebars from 'vite-plugin-handlebars';
 
 const root = resolve(__dirname, 'src');
@@ -13,16 +12,9 @@ export default defineConfig({
   server: {
     port: 7777,
     host: true,
-    // open: "index.html"
-  },
-
-  preview: {
-    port: 9999,
-    open: 'index.html',
   },
 
   plugins: [
-    inspect(),
     handlebars({
       partialDirectory: resolve(__dirname, 'src/partials'),
     }),
@@ -31,33 +23,27 @@ export default defineConfig({
   build: {
     outDir,
     emptyOutDir: true,
-    minify: false,
+    minify: true,
 
     rollupOptions: {
       input: {
         home: resolve(root, 'index.html'),
-        menu: resolve(root, 'menu.html'),
-        about: resolve(root, 'about.html'),
-        ourstory: resolve(root, 'our-story.html'),
-        blog: resolve(root, 'blog.html'),
-        blogpage: resolve(root, 'blog-page.html'),
-        contacts: resolve(root, 'contacts.html'),
       },
 
       output: {
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/[name]-[hash].js',
 
-        assetFileNames: ({ name }) => {
-          if (/\.(gif|jpe?g|png|svg)$/.test(name ?? '')) {
+        assetFileNames: ({ names }) => {
+          if (/\.(gif|jpe?g|png|svg|webp)$/.test(names ?? '')) {
             return 'assets/img/[name]-[hash][extname]';
           }
 
-          if (/\.css$/.test(name ?? '')) {
+          if (/\.css$/.test(names ?? '')) {
             return 'assets/css/[name]-[hash][extname]';
           }
 
-          if (/\.(ttf|woff|woff2|eot)$/.test(name ?? '')) {
+          if (/\.(ttf|woff|woff2|eot)$/.test(names ?? '')) {
             return 'assets/fonts/[name]-[hash][extname]';
           }
 

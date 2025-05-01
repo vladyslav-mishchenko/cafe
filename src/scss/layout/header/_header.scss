@@ -1,4 +1,7 @@
-@use '../../settings/breakpoints';
+@use 'sass:map';
+
+@use '../../utils/breakpoints' as bp;
+@use '../../utils/breakpoints' as container;
 
 @use './main-menu';
 @use './mobile-menu-btn';
@@ -26,25 +29,33 @@
   grid-template-columns: auto 1fr auto;
   align-items: center;
 
-  min-height: 80px;
+  // breakpoints
+  // only xs
+  min-height: 40px;
 
-  @include breakpoints.media-breakpoint-only(xl) {
-    min-height: 50px;
-  }
+  // // only sm
+  // @include bp.only(sm) {
+  // }
 
-  @include breakpoints.media-breakpoint-only(lg) {
+  // // only md
+  // @include bp.only(md) {
+  // }
+
+  // only lg
+  @include bp.only(lg) {
     min-height: 45px;
   }
 
-  // @include breakpoints.media-breakpoint-only(md) {}
-
-  // @include breakpoints.media-breakpoint-only(sm) {}
-
-  // @include breakpoints.media-breakpoint-only(xs) {}
-
-  @include breakpoints.media-breakpoint-down(lg) {
-    min-height: 40px;
+  // only xl
+  @include bp.only(xl) {
+    min-height: 50px;
   }
+
+  // only xxl
+  @include bp.only(xxl) {
+    min-height: 80px;
+  }
+  // end breakpoints
 
   > .logo-link {
     font-family: f102;
@@ -53,52 +64,94 @@
   }
 
   > .c1 {
-    // @include breakpoints.media-breakpoint-only(xl) {}
+    // breakpoints
+    // only xs
 
-    // @include breakpoints.media-breakpoint-only(lg) {}
+    // // only sm
+    // @include bp.only(sm) {
+    // }
 
-    // @include breakpoints.media-breakpoint-only(md) {}
+    // // only md
+    // @include bp.only(md) {
+    // }
 
-    // @include breakpoints.media-breakpoint-only(sm) {}
+    // // only lg
+    // @include bp.only(lg) {
+    // }
 
-    // @include breakpoints.media-breakpoint-only(xs) {}
+    // // only xl
+    // @include bp.only(xl) {
+    // }
 
-    @include breakpoints.media-breakpoint-down(lg) {
+    // // only xxl
+    // @include bp.only(xxl) {
+    // }
+
+    @include bp.down(lg) {
       display: none;
     }
+    // end breakpoints
   }
 
   > .c2 {
-    // @include breakpoints.media-breakpoint-only(xl) {}
+    // breakpoints
+    // only xs
 
-    // @include breakpoints.media-breakpoint-only(lg) {}
+    // // only sm
+    // @include bp.only(sm) {
+    // }
 
-    // @include breakpoints.media-breakpoint-only(md) {}
+    // // only md
+    // @include bp.only(md) {
+    // }
 
-    // @include breakpoints.media-breakpoint-only(sm) {}
+    // // only lg
+    // @include bp.only(lg) {
+    // }
 
-    // @include breakpoints.media-breakpoint-only(xs) {}
+    // // only xl
+    // @include bp.only(xl) {
+    // }
 
-    @include breakpoints.media-breakpoint-down(lg) {
+    // // only xxl
+    // @include bp.only(xxl) {
+    // }
+
+    @include bp.down(lg) {
       justify-self: center;
     }
+    // end breakpoints
   }
 
   > .c3 {
     display: none;
 
-    // @include breakpoints.media-breakpoint-only(xl) {}
+    // breakpoints
+    // only xs
 
-    // @include breakpoints.media-breakpoint-only(lg) {}
+    // // only sm
+    // @include bp.only(sm) {
+    // }
 
-    // @include breakpoints.media-breakpoint-only(md) {}
+    // // only md
+    // @include bp.only(md) {
+    // }
 
-    // @include breakpoints.media-breakpoint-only(sm) {}
+    // // only lg
+    // @include bp.only(lg) {
+    // }
 
-    // @include breakpoints.media-breakpoint-only(xs) {}
+    // // only xl
+    // @include bp.only(xl) {
+    // }
 
-    @include breakpoints.media-breakpoint-down(lg) {
+    // // only xxl
+    // @include bp.only(xxl) {
+    // }
+
+    @include bp.down(lg) {
       display: block;
     }
+    // end breakpoints
   }
 }

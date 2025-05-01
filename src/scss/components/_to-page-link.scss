@@ -1,4 +1,6 @@
-@use '../settings/breakpoints';
+@use 'sass:map';
+
+@use '../utils/breakpoints' as bp;
 
 .to-page-link {
   background-color: #ffb577;
@@ -8,47 +10,45 @@
   align-items: center;
 
   width: auto;
-  height: 48px;
 
-  padding: 0 25px;
+  height: 32px;
+  padding: 0 15px;
 
   &:hover {
     background-color: #ffc492;
   }
 
-  // @include breakpoints.media-breakpoint-only(xl) {}
+  // breakpoints
+  // // only sm
+  // @include bp.only(sm) {
+  // }
 
-  // @include breakpoints.media-breakpoint-only(lg) {}
+  // // only md
+  // @include bp.only(md) {
+  // }
 
-  // @include breakpoints.media-breakpoint-only(md) {}
+  // // only lg
+  // @include bp.only(lg) {
+  // }
 
-  // @include breakpoints.media-breakpoint-only(sm) {}
+  // // only xl
+  // @include bp.only(xl) {
+  // }
 
-  // @include breakpoints.media-breakpoint-only(xs) {}
+  // // only xxl
+  // @include bp.only(xxl) {
+  // }
 
-  @include breakpoints.media-breakpoint-down(lg) {
-    height: 32px;
-    padding: 0 15px;
+  @include bp.up(lg) {
+    height: 48px;
+    padding: 0 25px;
   }
+  // end breakpoints
 
   .t {
     font-family: f102;
-    font-size: 16px;
+    font-size: 14px;
     color: #2e2d33;
-
-    // @include breakpoints.media-breakpoint-only(xl) {}
-
-    // @include breakpoints.media-breakpoint-only(lg) {}
-
-    // @include breakpoints.media-breakpoint-only(md) {}
-
-    // @include breakpoints.media-breakpoint-only(sm) {}
-
-    // @include breakpoints.media-breakpoint-only(xs) {}
-
-    @include breakpoints.media-breakpoint-down(lg) {
-      font-size: 14px;
-    }
   }
 
   .icon {

@@ -1,139 +1,188 @@
-@use '../../../settings/breakpoints';
+@use 'sass:map';
+
+@use '../../../utils/breakpoints' as bp;
 
 .b-main-info {
-  margin-top: 95px;
+  margin-top: 25px;
   margin-bottom: 50px;
 
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: auto;
+  gap: 25px;
 
-  @include breakpoints.media-breakpoint-only(xl) {
-    margin-top: 90px;
+  // breakpoints
+  // // only sm
+  // @include bp.only(sm) {
+  // }
+
+  // // only md
+  // @include bp.only(md) {
+  // }
+
+  // // only lg
+  // @include bp.only(lg) {
+  // }
+
+  // // only xl
+  // @include bp.only(xl) {
+  // }
+
+  // // only xxl
+  // @include bp.only(xxl) {
+  // }
+
+  // up lg
+  @include bp.up(lg) {
+    grid-template-columns: 50% 50%;
+    gap: 0;
   }
-
-  // @include breakpoints.media-breakpoint-only(lg) {}
-
-  // @include breakpoints.media-breakpoint-only(md) {}
-
-  // @include breakpoints.media-breakpoint-only(sm) {}
-
-  // @include breakpoints.media-breakpoint-only(xs) {}
-
-  @include breakpoints.media-breakpoint-down(xl) {
-    margin-top: 50px;
-  }
-
-  @include breakpoints.media-breakpoint-down(lg) {
-    grid-template-columns: auto;
-    gap: 50px;
-  }
+  // end breakpoints
 
   > .c1 {
-    align-self: center;
-    padding-right: 25px;
+    // breakpoints
+    // // only sm
+    // @include bp.only(sm) {
+    // }
 
-    // @include breakpoints.media-breakpoint-only(xl) {}
+    // // only md
+    // @include bp.only(md) {
+    // }
 
-    // @include breakpoints.media-breakpoint-only(lg) {}
+    // // only lg
+    // @include bp.only(lg) {
+    // }
 
-    @include breakpoints.media-breakpoint-only(md) {
-      width: 80%;
+    // // only xl
+    // @include bp.only(xl) {
+    // }
+
+    // // only xxl
+    // @include bp.only(xxl) {
+    // }
+
+    // up lg
+    @include bp.up(lg) {
+      align-self: center;
     }
-
-    @include breakpoints.media-breakpoint-only(sm) {
-      width: 80%;
-    }
-
-    // @include breakpoints.media-breakpoint-only(xs) {}
-
-    // @include breakpoints.media-breakpoint-down(xl){}
-
-    @include breakpoints.media-breakpoint-down(lg) {
-      padding-right: 0;
-    }
+    // end breakpoints
   }
 
   > .c2 {
+    // breakpoints
+    // only xs
+    @include bp.only(xs) {
+      justify-self: center;
+    }
+
+    // // only sm
+    // @include bp.only(sm) {
+    // }
+
+    // // only md
+    // @include bp.only(md) {
+    // }
+
+    // // only lg
+    // @include bp.only(lg) {
+    // }
+
+    // // only xl
+    // @include bp.only(xl) {
+    // }
+
+    // // only xxl
+    // @include bp.only(xxl) {
+    // }
+    // end breakpoints
   }
 }
 
 .main-info--banner {
   display: block;
-  max-width: 100%;
 }
 
 .main-info--article {
+  // breakpoints
+  // // only sm
+  // @include bp.only(sm) {
+  // }
+
+  // // only md
+  // @include bp.only(md) {
+  // }
+
+  // // only lg
+  // @include bp.only(lg) {
+  // }
+
+  // // only xl
+  // @include bp.only(xl) {
+  // }
+
+  // // only xxl
+  // @include bp.only(xxl) {
+  // }
+
+  // up lg
+  @include bp.up(lg) {
+    align-self: center;
+    padding-right: 25px;
+  }
+  // end breakpoints
+
   > h1 {
     font-family: f203;
-    font-size: 58px;
+    font-size: 24px;
     color: #ffffff;
+    text-align: center;
 
-    @include breakpoints.media-breakpoint-only(xl) {
-      font-size: 48px;
+    // breakpoints
+    // // only sm
+    // @include bp.only(sm) {
+    // }
+
+    // only md
+    @include bp.only(md) {
+      font-size: 32px;
     }
 
-    @include breakpoints.media-breakpoint-only(lg) {
+    // only lg
+    @include bp.only(lg) {
       font-size: 38px;
     }
 
-    @include breakpoints.media-breakpoint-only(md) {
-      font-size: 28px;
+    // only xl
+    @include bp.only(xl) {
+      font-size: 48px;
     }
 
-    @include breakpoints.media-breakpoint-only(sm) {
-      font-size: 28px;
+    // only xxl
+    @include bp.only(xxl) {
+      font-size: 48px;
     }
 
-    @include breakpoints.media-breakpoint-only(xs) {
-      font-size: 24px;
+    // up sm
+    @include bp.up(sm) {
+      text-align: left;
     }
+    // end breakpoints
   }
 
   p {
     margin: 15px 0 20px 0;
     padding: 0;
 
-    font-size: 16px;
+    font-size: 14px;
     color: #b8b8b8;
-
-    // @include breakpoints.media-breakpoint-only(xl) {}
-
-    // @include breakpoints.media-breakpoint-only(lg) {}
-
-    // @include breakpoints.media-breakpoint-only(md) {}
-
-    // @include breakpoints.media-breakpoint-only(sm) {}
-
-    // @include breakpoints.media-breakpoint-only(xs) {}
-
-    @include breakpoints.media-breakpoint-down(xl) {
-      font-size: 14px;
-    }
   }
 }
 
 .main-info--list {
-  margin-top: 50px;
-
-  @include breakpoints.media-breakpoint-only(xl) {
-    margin-top: 40px;
-  }
-
-  // @include breakpoints.media-breakpoint-only(lg) {}
-
-  // @include breakpoints.media-breakpoint-only(md) {}
-
-  // @include breakpoints.media-breakpoint-only(sm) {}
-
-  // @include breakpoints.media-breakpoint-only(xs) {}
-
-  @include breakpoints.media-breakpoint-down(xl) {
-    margin-top: 35px;
-  }
+  margin-top: 25px;
 
   > .item {
     font-family: f203;
-    font-size: 20px;
+    font-size: 16px;
     color: #ffffff;
 
     margin: 15px 0 15px 0;
@@ -149,20 +198,6 @@
     &:only-child {
       margin: 0 0 0 0;
     }
-
-    // @include breakpoints.media-breakpoint-only(xl) {}
-
-    // @include breakpoints.media-breakpoint-only(lg) {}
-
-    // @include breakpoints.media-breakpoint-only(md) {}
-
-    // @include breakpoints.media-breakpoint-only(sm) {}
-
-    // @include breakpoints.media-breakpoint-only(xs) {}
-
-    @include breakpoints.media-breakpoint-down(xl) {
-      font-size: 16px;
-    }
   }
 }
 
@@ -171,7 +206,7 @@
 
   > .item {
     font-family: f101;
-    font-size: 16px;
+    font-size: 14px;
     color: #b8b8b8;
 
     margin: 5px 0 5px 0;
@@ -186,20 +221,6 @@
 
     &:only-child {
       margin: 0 0 0 0;
-    }
-
-    // @include breakpoints.media-breakpoint-only(xl) {}
-
-    // @include breakpoints.media-breakpoint-only(lg) {}
-
-    // @include breakpoints.media-breakpoint-only(md) {}
-
-    // @include breakpoints.media-breakpoint-only(sm) {}
-
-    // @include breakpoints.media-breakpoint-only(xs) {}
-
-    @include breakpoints.media-breakpoint-down(xl) {
-      font-size: 14px;
     }
   }
 }

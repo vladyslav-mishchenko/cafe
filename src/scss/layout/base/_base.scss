@@ -1,0 +1,84 @@
+@use 'sass:map';
+
+@use '../../utils/breakpoints' as bp;
+@use '../../utils/breakpoints' as container;
+
+html {
+}
+
+body {
+  font-family: f101;
+  background: #19161b;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+.website {
+  min-height: 100vh;
+}
+
+.website {
+  margin: 0 auto;
+
+  min-width: 320px;
+  max-width: 1920px;
+
+  background: #19161b;
+
+  display: grid;
+
+  // header: auto | fixed
+  // content: 1fr
+  // footer auto
+  grid-template-rows: 1fr auto;
+}
+
+// adaptive container
+.g {
+  > .container {
+    margin: 0 auto;
+    max-width: none;
+    padding: 0 15px;
+
+    // only xs
+    // @include bp.only(xs) {
+    //   padding: 0 15px;
+    // }
+
+    // only sm
+    @include bp.only(sm) {
+      max-width: container.max-width(sm);
+    }
+
+    // only md
+    @include bp.only(md) {
+      max-width: container.max-width(md);
+    }
+
+    // only lg
+    @include bp.only(lg) {
+      max-width: container.max-width(lg);
+    }
+
+    // only xl
+    @include bp.only(xl) {
+      max-width: container.max-width(xl);
+    }
+
+    // only xxl
+    @include bp.only(xxl) {
+      max-width: container.max-width(xxl);
+    }
+
+    // up sm
+    @include bp.up(sm) {
+      padding: 0;
+    }
+  }
+
+  > .container-fluid {
+  }
+}

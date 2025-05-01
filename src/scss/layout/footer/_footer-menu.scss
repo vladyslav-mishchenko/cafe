@@ -1,4 +1,6 @@
-@use '../../settings/breakpoints';
+@use 'sass:map';
+
+@use '../../utils/breakpoints' as bp;
 
 .footer-nav {
   padding-top: 50px;
@@ -6,65 +8,54 @@
 }
 
 .footer-menu {
-  display: flex;
-  flex-direction: row;
+  // breakpoints
+  // // only sm
+  // @include bp.only(sm) {
+  // }
 
-  // @include breakpoints.media-breakpoint-only(xl) {}
+  // // only md
+  // @include bp.only(md) {
+  // }
 
-  // @include breakpoints.media-breakpoint-only(lg) {}
-
-  // @include breakpoints.media-breakpoint-only(md) {}
-
-  // @include breakpoints.media-breakpoint-only(sm) {}
-
-  // @include breakpoints.media-breakpoint-only(xs) {}
-
-  @include breakpoints.media-breakpoint-down(lg) {
-    display: block;
+  // only lg
+  @include bp.only(lg) {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
   }
 
-  > .item {
-    margin: 0 20px 0 20px;
+  // only xl
+  @include bp.only(xl) {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
 
+  // only xxl
+  @include bp.only(xxl) {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  // end breakpoints
+
+  > .item {
     &:first-child {
-      margin: 0 20px 0 0;
+      margin: 0 0 0 0;
     }
 
     &:last-child {
-      margin: 0 0 0 20px;
+      margin: 0 0 0 0;
     }
 
     &:only-child {
       margin: 0 0 0 0;
     }
 
-    // @include breakpoints.media-breakpoint-only(xl) {}
-
-    // @include breakpoints.media-breakpoint-only(lg) {}
-
-    // @include breakpoints.media-breakpoint-only(md) {}
-
-    // @include breakpoints.media-breakpoint-only(sm) {}
-
-    // @include breakpoints.media-breakpoint-only(xs) {}
-
-    @include breakpoints.media-breakpoint-down(lg) {
-      margin: 8px 0 8px 0;
-
-      &:first-child {
-        margin: 0 0 0 0;
-      }
-
-      &:last-child {
-        margin: 0 0 0 0;
-      }
-
-      &:only-child {
-        margin: 0 0 0 0;
-      }
-    }
-
     > .link {
+      display: block;
+      padding: 5px 0 5px 0;
+
       font-family: f102;
       font-size: 14px;
 
@@ -73,30 +64,6 @@
 
       &:hover {
         color: #ffb577;
-      }
-
-      // @include breakpoints.media-breakpoint-only(xl) {}
-
-      // @include breakpoints.media-breakpoint-only(lg) {}
-
-      // @include breakpoints.media-breakpoint-only(md) {}
-
-      // @include breakpoints.media-breakpoint-only(sm) {}
-
-      // @include breakpoints.media-breakpoint-only(xs) {}
-
-      @include breakpoints.media-breakpoint-down(lg) {
-        display: block;
-        padding: 5px 0 5px 0;
-
-        &:first-child {
-        }
-
-        &:last-child {
-        }
-
-        &:only-child {
-        }
       }
     }
   }

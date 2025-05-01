@@ -1,4 +1,6 @@
-@use '../../settings/breakpoints';
+@use 'sass:map';
+
+@use '../../utils/breakpoints' as bp;
 
 @use './main-info/main-info';
 @use './know-more/know-more';
@@ -9,23 +11,30 @@
 @use './contacts/contacts';
 
 .content {
-  padding-top: 80px;
+  padding-top: 40px;
 
-  @include breakpoints.media-breakpoint-only(xl) {
-    padding-top: 50px;
-  }
+  // // breakpoints
+  // // only sm
+  // @include bp.only(sm) {
+  // }
 
-  @include breakpoints.media-breakpoint-only(lg) {
+  // // only md
+  // @include bp.only(md) {
+  // }
+
+  // only lg
+  @include bp.only(lg) {
     padding-top: 45px;
   }
 
-  // @include breakpoints.media-breakpoint-only(md) {}
-
-  // @include breakpoints.media-breakpoint-only(sm) {}
-
-  // @include breakpoints.media-breakpoint-only(xs) {}
-
-  @include breakpoints.media-breakpoint-down(lg) {
-    padding-top: 40px;
+  // only xl
+  @include bp.only(xl) {
+    padding-top: 50px;
   }
+
+  // only xxl
+  @include bp.only(xxl) {
+    padding-top: 80px;
+  }
+  // end breakpoints
 }

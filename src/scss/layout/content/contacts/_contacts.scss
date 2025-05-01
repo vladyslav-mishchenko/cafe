@@ -1,77 +1,54 @@
-@use '../../../settings/breakpoints';
+@use 'sass:map';
+
+@use '../../../utils/breakpoints' as bp;
 
 .contacts {
-  margin-top: 150px;
-
-  // @include breakpoints.media-breakpoint-only(xl) {}
-
-  // @include breakpoints.media-breakpoint-only(lg) {}
-
-  // @include breakpoints.media-breakpoint-only(md) {}
-
-  // @include breakpoints.media-breakpoint-only(sm) {}
-
-  // @include breakpoints.media-breakpoint-only(xs) {}
-
-  @include breakpoints.media-breakpoint-down(lg) {
-    margin-bottom: 100px;
-  }
+  margin-top: 100px;
 }
 
 .b-contacts {
   display: grid;
-  grid-template-columns: 450px 1fr;
 
+  grid-template-columns: auto;
   background-color: #1f1d21;
 
-  // @include breakpoints.media-breakpoint-only(xl) {}
+  // breakpoints
+  // // only sm
+  // @include bp.only(sm) {
+  // }
 
-  // @include breakpoints.media-breakpoint-only(lg) {}
+  // // only md
+  // @include bp.only(md) {
+  // }
 
-  // @include breakpoints.media-breakpoint-only(md) {}
+  // // only lg
+  // @include bp.only(lg) {
+  // }
 
-  // @include breakpoints.media-breakpoint-only(sm) {}
+  // // only xl
+  // @include bp.only(xl) {
+  // }
 
-  // @include breakpoints.media-breakpoint-only(xs) {}
+  // // only xxl
+  // @include bp.only(xxl) {
+  // }
 
-  @include breakpoints.media-breakpoint-down(lg) {
-    grid-template-columns: auto;
+  // up lg
+  @include bp.up(lg) {
+    grid-template-columns: 450px 1fr;
   }
+  // end breakpoints
 
   > .c1 {
   }
 
   > .c2 {
-    // @include breakpoints.media-breakpoint-only(xl) {}
-
-    // @include breakpoints.media-breakpoint-only(lg) {}
-
-    // @include breakpoints.media-breakpoint-only(md) {}
-
-    // @include breakpoints.media-breakpoint-only(sm) {}
-
-    // @include breakpoints.media-breakpoint-only(xs) {}
-
-    @include breakpoints.media-breakpoint-down(lg) {
-      min-height: 450px;
-    }
+    min-height: 450px;
   }
 }
 
 .contacts-list {
-  padding: 50px 0 50px 50px;
-
-  // @include breakpoints.media-breakpoint-only(xl) {}
-
-  // @include breakpoints.media-breakpoint-only(lg) {}
-
-  // @include breakpoints.media-breakpoint-only(md) {}
-
-  // @include breakpoints.media-breakpoint-only(sm) {}
-
-  @include breakpoints.media-breakpoint-only(xs) {
-    padding: 20px 0 50px 20px;
-  }
+  padding: 20px 0 50px 20px;
 
   > .item {
     margin: 20px 0 20px 0;

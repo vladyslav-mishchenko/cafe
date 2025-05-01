@@ -1,113 +1,146 @@
-@use '../../../settings/breakpoints';
+@use 'sass:map';
+
+@use '../../../utils/breakpoints' as bp;
 
 .serving {
-  margin: 150px 0;
+  margin: 100px 0;
 }
 
 .serving--article {
   h2 {
     font-family: f203;
-    font-size: 42px;
+    font-size: 24px;
 
     color: #ffffff;
 
     line-height: 1.4;
 
-    @include breakpoints.media-breakpoint-only(xl) {
-      font-size: 42px;
+    // breakpoints
+    // // only sm
+    // @include bp.only(sm) {
+    // }
+
+    // only md
+    @include bp.only(md) {
+      font-size: 32px;
     }
 
-    @include breakpoints.media-breakpoint-only(lg) {
-      font-size: 38px;
+    // only lg
+    @include bp.only(lg) {
+      font-size: 35px;
     }
 
-    @include breakpoints.media-breakpoint-only(md) {
-      font-size: 22px;
+    // only xl
+    @include bp.only(xl) {
+      font-size: 40px;
     }
 
-    @include breakpoints.media-breakpoint-only(sm) {
-      font-size: 22px;
+    // only xxl
+    @include bp.only(xxl) {
+      font-size: 40px;
     }
-
-    @include breakpoints.media-breakpoint-only(xs) {
-      font-size: 22px;
-    }
+    // end breakpoints
   }
 
   p {
-    font-size: 16px;
+    font-size: 14px;
     color: #b8b8b8;
 
     line-height: 1.4;
-
-    // @include breakpoints.media-breakpoint-only(xl) {}
-
-    // @include breakpoints.media-breakpoint-only(lg) {}
-
-    // @include breakpoints.media-breakpoint-only(md) {}
-
-    // @include breakpoints.media-breakpoint-only(sm) {}
-
-    // @include breakpoints.media-breakpoint-only(xs) {}
-
-    @include breakpoints.media-breakpoint-down(xl) {
-      font-size: 14px;
-    }
   }
 }
 
 .b-serving {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: auto;
 
   padding-top: 35px;
 
-  // @include breakpoints.media-breakpoint-only(xl) {}
+  // breakpoints
+  // // only sm
+  // @include bp.only(sm) {
+  // }
 
-  // @include breakpoints.media-breakpoint-only(lg) {}
+  // // only md
+  // @include bp.only(md) {
+  // }
 
-  // @include breakpoints.media-breakpoint-only(md) {}
+  // // only lg
+  // @include bp.only(lg) {
+  // }
 
-  // @include breakpoints.media-breakpoint-only(sm) {}
+  // // only xl
+  // @include bp.only(xl) {
+  // }
 
-  // @include breakpoints.media-breakpoint-only(xs) {}
+  // // only xxl
+  // @include bp.only(xxl) {
+  // }
 
-  @include breakpoints.media-breakpoint-down(lg) {
-    grid-template-columns: auto;
+  // up lg
+  @include bp.up(lg) {
+    grid-template-columns: 60% 40%;
   }
+  // end breakpoints
 
   > .c1 {
     padding-right: 50px;
 
-    // @include breakpoints.media-breakpoint-only(xl) {}
+    // breakpoints
+    // // only sm
+    // @include bp.only(sm) {
+    // }
 
-    // @include breakpoints.media-breakpoint-only(lg) {}
+    // // only md
+    // @include bp.only(md) {
+    // }
 
-    // @include breakpoints.media-breakpoint-only(md) {}
+    // // only lg
+    // @include bp.only(lg) {
+    // }
 
-    // @include breakpoints.media-breakpoint-only(sm) {}
+    // // only xl
+    // @include bp.only(xl) {
+    // }
 
-    // @include breakpoints.media-breakpoint-only(xs) {}
+    // // only xxl
+    // @include bp.only(xxl) {
+    // }
 
-    @include breakpoints.media-breakpoint-down(lg) {
+    // up lg
+    @include bp.up(lg) {
       padding-right: 0;
     }
+    // end breakpoints
   }
 
   > .c2 {
-    // @include breakpoints.media-breakpoint-only(xl) {}
+    // breakpoints
+    // // only sm
+    // @include bp.only(sm) {
+    // }
 
-    // @include breakpoints.media-breakpoint-only(lg) {}
+    // // only md
+    // @include bp.only(md) {
+    // }
 
-    // @include breakpoints.media-breakpoint-only(md) {}
+    // // only lg
+    // @include bp.only(lg) {
+    // }
 
-    // @include breakpoints.media-breakpoint-only(sm) {}
+    // // only xl
+    // @include bp.only(xl) {
+    // }
 
-    // @include breakpoints.media-breakpoint-only(xs) {}
+    // // only xxl
+    // @include bp.only(xxl) {
+    // }
 
-    @include breakpoints.media-breakpoint-down(lg) {
+    // up lg
+    @include bp.up(lg) {
       padding-top: 10px;
     }
+    // end breakpoints
   }
 }
 
@@ -116,23 +149,36 @@
   background-color: #000000;
 
   display: grid;
-  grid-template-columns: 1fr 1px 1fr 1px 1fr;
+  grid-template-columns: auto;
 
-  // @include breakpoints.media-breakpoint-only(xl) {}
-
-  // @include breakpoints.media-breakpoint-only(lg) {}
-
-  @include breakpoints.media-breakpoint-only(md) {
+  // breakpoints
+  // only sm
+  @include bp.only(sm) {
     grid-template-columns: 1fr 1px 1fr;
   }
 
-  @include breakpoints.media-breakpoint-only(sm) {
+  // only md
+  @include bp.only(md) {
     grid-template-columns: 1fr 1px 1fr;
   }
 
-  @include breakpoints.media-breakpoint-only(xs) {
-    grid-template-columns: auto;
+  // // only lg
+  // @include bp.only(lg) {
+  // }
+
+  // // only xl
+  // @include bp.only(xl) {
+  // }
+
+  // // only xxl
+  // @include bp.only(xxl) {
+  // }
+
+  // up lg
+  @include bp.up(lg) {
+    grid-template-columns: 1fr 1px 1fr 1px 1fr;
   }
+  // end breakpoints
 
   > .item {
   }
@@ -140,15 +186,21 @@
   > .delimiter {
     background-color: #19161b;
 
+    height: 1px;
+
     &:nth-child(6n) {
+      display: block;
+    }
+
+    &:last-child {
       display: none;
     }
 
-    // @include breakpoints.media-breakpoint-only(xl) {}
+    // breakpoints
+    // only sm
+    @include bp.only(sm) {
+      height: auto;
 
-    // @include breakpoints.media-breakpoint-only(lg) {}
-
-    @include breakpoints.media-breakpoint-only(md) {
       &:nth-child(6n) {
         display: block;
       }
@@ -158,7 +210,10 @@
       }
     }
 
-    @include breakpoints.media-breakpoint-only(sm) {
+    // only md
+    @include bp.only(md) {
+      height: auto;
+
       &:nth-child(6n) {
         display: block;
       }
@@ -168,88 +223,48 @@
       }
     }
 
-    @include breakpoints.media-breakpoint-only(xs) {
-      height: 1px;
+    // // only lg
+    // @include bp.only(lg) {
+    // }
+
+    // // only xl
+    // @include bp.only(xl) {
+    // }
+
+    // // only xxl
+    // @include bp.only(xxl) {
+    // }
+
+    // up lg
+    @include bp.up(lg) {
+      height: auto;
 
       &:nth-child(6n) {
-        display: block;
-      }
-
-      &:last-child {
         display: none;
       }
     }
+    // end breakpoints
   }
 }
 
 .serving--card {
-  padding: 35px;
-
-  @include breakpoints.media-breakpoint-only(xl) {
-    padding: 25px;
-  }
-
-  // @include breakpoints.media-breakpoint-only(lg) {}
-
-  // @include breakpoints.media-breakpoint-only(md) {}
-
-  // @include breakpoints.media-breakpoint-only(sm) {}
-
-  // @include breakpoints.media-breakpoint-only(xs) {}
-
-  @include breakpoints.media-breakpoint-down(xl) {
-    padding: 20px;
-  }
+  padding: 20px;
 
   > h3 {
     margin: 25px 0 10px 0;
 
     font-family: f203;
-    font-size: 32px;
+    font-size: 22px;
 
     color: #ffffff;
-
-    @include breakpoints.media-breakpoint-only(xl) {
-      font-size: 32px;
-    }
-
-    @include breakpoints.media-breakpoint-only(lg) {
-      font-size: 22px;
-    }
-
-    @include breakpoints.media-breakpoint-only(md) {
-      font-size: 22px;
-    }
-
-    @include breakpoints.media-breakpoint-only(sm) {
-      font-size: 22px;
-    }
-
-    @include breakpoints.media-breakpoint-only(xs) {
-      font-size: 22px;
-    }
   }
 
   p {
     margin: 15px 0 30px 0;
     padding: 0;
 
-    font-size: 16px;
+    font-size: 14px;
     color: #b8b8b8;
-
-    // @include breakpoints.media-breakpoint-only(xl) {}
-
-    // @include breakpoints.media-breakpoint-only(lg) {}
-
-    // @include breakpoints.media-breakpoint-only(md) {}
-
-    // @include breakpoints.media-breakpoint-only(sm) {}
-
-    // @include breakpoints.media-breakpoint-only(xs) {}
-
-    @include breakpoints.media-breakpoint-down(lg) {
-      font-size: 14px;
-    }
   }
 }
 
