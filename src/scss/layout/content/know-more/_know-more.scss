@@ -120,7 +120,6 @@
   display: grid;
   grid-template-columns: auto;
   gap: 20px;
-  width: 55%;
 
   // breakpoints
   // only sm
@@ -140,17 +139,16 @@
 
   // only xl
   @include bp.only(xl) {
-    width: 55%;
+    grid-template-columns: auto auto auto;
   }
 
   // only xxl
   @include bp.only(xxl) {
-    width: 55%;
+    grid-template-columns: auto auto auto;
   }
 
   // up xl
   @include bp.up(xl) {
-    width: auto;
   }
   // end breakpoints
 

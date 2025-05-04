@@ -198,12 +198,15 @@
   }
 }
 
-.menu-list--img {
-  display: block;
+.menu-list--picture {
+  img {
+    display: block;
 
-  max-width: 100%;
-  opacity: 100%;
-  transition: opacity 0.2s linear;
+    max-width: 100%;
+    opacity: 100%;
+
+    transition: opacity 0.2s linear;
+  }
 }
 
 .menu-list--price {

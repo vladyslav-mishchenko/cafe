@@ -17,10 +17,40 @@
 }
 
 .footer-top {
-  min-height: 284px;
-
   display: grid;
-  align-content: end;
+
+  min-height: auto;
+  align-content: normal;
+
+  padding-top: 50px;
+
+  // breakpoints
+  // // only sm
+  // @include bp.only(sm) {
+  // }
+
+  // // only md
+  // @include bp.only(md) {
+  // }
+
+  // only lg
+  @include bp.only(lg) {
+    min-height: 284px;
+    align-content: end;
+  }
+
+  // only xl
+  @include bp.only(xl) {
+    min-height: 284px;
+    align-content: end;
+  }
+
+  // only xxl
+  @include bp.only(xxl) {
+    min-height: 284px;
+    align-content: end;
+  }
+  // end breakpoints
 
   > .r1 {
     justify-self: start;
