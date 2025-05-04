@@ -38,11 +38,35 @@
     grid-template-columns: 45% 55%;
     gap: 0;
   }
-  // // end breakpoints
+  // end breakpoints
 
   > .c1 {
-    align-self: auto;
-    padding-top: 25px;
+    // breakpoints
+    // // only sm
+    // @include bp.only(sm) {
+    // }
+
+    // // only md
+    // @include bp.only(md) {
+    // }
+
+    // // only lg
+    // @include bp.only(lg) {
+    // }
+
+    // // only xl
+    // @include bp.only(xl) {
+    // }
+
+    // // only xxl
+    // @include bp.only(xxl) {
+    // }
+
+    // up lg
+    @include bp.up(lg) {
+      align-self: center;
+    }
+    // end breakpoints
   }
 
   > .c2 {
@@ -52,7 +76,7 @@
 .quote-info {
   width: auto;
   margin: 0;
-  padding: 0 15px;
+  padding: 25px;
 }
 
 .quote-video {
