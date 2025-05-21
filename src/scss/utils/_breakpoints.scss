@@ -3,6 +3,12 @@
 // breakpoints
 $breakpoints: (
   xs: 0,
+  xs-320: 320px,
+  xs-360: 360px,
+  xs-375: 375px,
+  xs-390: 390px,
+  xs-410: 410px,
+  xs-430: 430px,
   sm: 576px,
   md: 768px,
   lg: 992px,
@@ -13,6 +19,12 @@ $breakpoints: (
 // media min-width
 $min: (
   xs: 0,
+  xs-320: 320px,
+  xs-360: 360px,
+  xs-375: 375px,
+  xs-390: 390px,
+  xs-410: 410px,
+  xs-430: 430px,
   sm: 576px,
   md: 768px,
   lg: 992px,
@@ -22,6 +34,12 @@ $min: (
 
 // media max-with
 $max: (
+  xs-320: 359.98px,
+  xs-360: 374.98px,
+  xs-375: 389.98px,
+  xs-390: 409.98px,
+  xs-410: 429.98px,
+  xs-430: 575.98px,
   xs: 575.98px,
   sm: 767.98px,
   md: 991.98px,

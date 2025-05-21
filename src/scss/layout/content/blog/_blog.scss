@@ -3,7 +3,7 @@
 @use '../../../utils/breakpoints' as bp;
 
 .blog {
-  margin: 100px 0;
+  margin: 40px 0;
 }
 
 .blog--article {
@@ -192,6 +192,5 @@
 .blog-post-picture {
   img {
     display: block;
-    max-width: 100%;
   }
 }

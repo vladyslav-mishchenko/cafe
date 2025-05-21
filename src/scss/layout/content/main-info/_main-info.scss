@@ -4,7 +4,7 @@
 
 .b-main-info {
   margin-top: 25px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 
   display: grid;
   grid-template-columns: auto;
@@ -99,6 +99,7 @@
 
 .main-info--banner {
   display: block;
+  // max-width: 100%;
 }
 
 .main-info--article {

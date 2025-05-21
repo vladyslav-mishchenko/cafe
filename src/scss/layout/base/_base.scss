@@ -40,8 +40,7 @@ body {
 .g {
   > .container {
     margin: 0 auto;
-    max-width: none;
-    padding: 0 15px;
+    padding: 0 16px;
 
     // only xs
     // @include bp.only(xs) {

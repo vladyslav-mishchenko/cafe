@@ -3,7 +3,7 @@
 @use '../../../utils/breakpoints' as bp;
 
 .menu {
-  margin: 100px 0;
+  margin: 40px 0;
 }
 
 .menu--article {
@@ -145,32 +145,47 @@
 
 .menu-list {
   display: grid;
-  grid-template-columns: auto;
-  gap: 20px;
 
-  // breakpoints
-  // // only sm
-  // @include bp.only(sm) {
-  // }
+  // only xs
+  @include bp.only(xs) {
+    grid-template-columns: auto;
+    justify-content: center;
+    row-gap: 20px;
+  }
+
+  // only sm
+  @include bp.only(sm) {
+    grid-template-columns: repeat(2, 260px);
+    justify-content: space-between;
+    row-gap: 20px;
+  }
 
   // only md
   @include bp.only(md) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 350px);
+    justify-content: space-between;
+    row-gap: 20px;
   }
 
   // only lg
   @include bp.only(lg) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 460px);
+    justify-content: space-between;
+    row-gap: 40px;
   }
 
   // only xl
   @include bp.only(xl) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 360px);
+    justify-content: space-between;
+    row-gap: 30px;
   }
 
   // only xxl
   @include bp.only(xxl) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 420px);
+    justify-content: space-between;
+    row-gap: 30px;
   }
   // end breakpoints
 
