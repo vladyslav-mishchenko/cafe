@@ -17,7 +17,7 @@
     line-height: 1.5;
 
     // breakpoints
-    // // only sm
+    // only sm
     // @include bp.only(sm) {
     // }
 
@@ -45,19 +45,9 @@
 }
 
 .blog-cards {
-  margin-top: 50px;
-
-  > .item {
-    margin: 50px 0 50px 0;
-
-    &:first-child {
-      margin: 0 0 50px 0;
-    }
-
-    &:last-child {
-      margin: 50px 0 0 0;
-    }
-  }
+  margin-top: 40px;
+  display: grid;
+  row-gap: 50px;
 }
 
 .blog-card {
@@ -65,23 +55,59 @@
   grid-template-columns: auto;
 
   // breakpoints
-  // // only sm
+  // only xs-320
+  @include bp.only(xs-320) {
+    grid-template-columns: 288px;
+    justify-content: center;
+  }
+
+  // only xs-360
+  @include bp.only(xs-360) {
+    grid-template-columns: 328px;
+    justify-content: center;
+  }
+
+  // only xs-375
+  @include bp.only(xs-375) {
+    grid-template-columns: 343px;
+    justify-content: center;
+  }
+
+  // only xs-390
+  @include bp.only(xs-390) {
+    grid-template-columns: 358px;
+    justify-content: center;
+  }
+
+  // only xs-410
+  @include bp.only(xs-410) {
+    grid-template-columns: 378px;
+    justify-content: center;
+  }
+
+  // only xs-430
+  @include bp.only(xs-430) {
+    grid-template-columns: 398px;
+    justify-content: center;
+  }
+
+  // only sm
   // @include bp.only(sm) {
   // }
 
-  // // only md
+  // only md
   // @include bp.only(md) {
   // }
 
-  // // only lg
+  // only lg
   // @include bp.only(lg) {
   // }
 
-  // // only xl
+  // only xl
   // @include bp.only(xl) {
   // }
 
-  // // only xxl
+  // only xxl
   // @include bp.only(xxl) {
   // }
 
@@ -102,23 +128,23 @@
     color: #b8b8b8;
 
     // breakpoints
-    // // only sm
+    // only sm
     // @include bp.only(sm) {
     // }
 
-    // // only md
+    // only md
     // @include bp.only(md) {
     // }
 
-    // // only lg
+    // only lg
     // @include bp.only(lg) {
     // }
 
-    // // only xl
+    // only xl
     // @include bp.only(xl) {
     // }
 
-    // // only xxl
+    // only xxl
     // @include bp.only(xxl) {
     // }
 
