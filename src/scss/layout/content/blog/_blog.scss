@@ -190,33 +190,7 @@
 
     > .more {
       text-align: right;
-
-      // breakpoints
-      // // only sm
-      // @include bp.only(sm) {
-      // }
-
-      // // only md
-      // @include bp.only(md) {
-      // }
-
-      // // only lg
-      // @include bp.only(lg) {
-      // }
-
-      // // only xl
-      // @include bp.only(xl) {
-      // }
-
-      // // only xxl
-      // @include bp.only(xxl) {
-      // }
-
-      // up lg
-      @include bp.up(lg) {
-        padding-top: 15px;
-      }
-      // end breakpoints
+      padding-top: 15px;
     }
   }
 }
