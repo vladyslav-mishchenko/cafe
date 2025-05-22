@@ -3,6 +3,7 @@
 // breakpoints
 $breakpoints: (
   xs: 0,
+  xs-0: 0,
   xs-320: 320px,
   xs-360: 360px,
   xs-375: 375px,
@@ -18,7 +19,8 @@ $breakpoints: (
 
 // media min-width
 $min: (
-  xs: 0,
+  xs: 0px,
+  xs-0: 0px,
   xs-320: 320px,
   xs-360: 360px,
   xs-375: 375px,
@@ -34,6 +36,7 @@ $min: (
 
 // media max-with
 $max: (
+  xs-0: 319.98px,
   xs-320: 359.98px,
   xs-360: 374.98px,
   xs-375: 389.98px,

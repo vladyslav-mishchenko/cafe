@@ -55,6 +55,12 @@
   grid-template-columns: auto;
 
   // breakpoints
+  // only xs-0
+  @include bp.only(xs-0) {
+    grid-template-columns: 240px;
+    justify-content: center;
+  }
+
   // only xs-320
   @include bp.only(xs-320) {
     grid-template-columns: 288px;
